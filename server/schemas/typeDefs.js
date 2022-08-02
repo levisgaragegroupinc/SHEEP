@@ -1,22 +1,25 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+
   type Category {
     _id: ID
     name: String
   }
+
   type Project {
     _id: ID
     name: String
     description: String
     image: String
-    category: Category
+    products: Product
   }
 
-type product {
-_id: ID
-price: Int
-}
+  type Product {
+  _id: ID
+  price: Float
+  category: Category
+  }
 
   type Order {
     _id: ID
@@ -24,11 +27,6 @@ price: Int
     product: [Products]
   }
 
-  type FundHistory {
-    projectId: String!
-    projectTitle: String!
-    projectDescription: String
-  }
   type User {
     _id: ID
     username: String!
@@ -36,6 +34,12 @@ price: Int
     fundedCount: Int
     funded: [FundHistory]
     orders: [Order]
+  }
+
+  type FundHistory {
+    projectId: String!
+    projectTitle: String!
+    projectDescription: String
   }
   type Checkout {
     session: ID
