@@ -64,14 +64,14 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // Add a virtual that goes through the orders and sums the total amount donated
-userSchema.virtual("dollarsDonated").get(function () {
-  return this.orders.length;
-});
+// userSchema.virtual("dollarsDonated").get(function () {
+//   return this.orders.length;
+// });
 
 // when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
-userSchema.virtual("projectsFunded").get(function () {
-  return this.projectsFunded.length;
-});
+// userSchema.virtual("projectsFunded").get(function () {
+//   return this.projectsFunded.length;
+// });
 
 const User = model("User", userSchema);
 

@@ -7,7 +7,7 @@ const productSchema = new Schema({
     required: true,
   },
   price: {
-    type: Float,
+    type: Number,
     required: true,
   },
 });
