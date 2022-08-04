@@ -1,5 +1,6 @@
-# SHEEP
-Support Helping End and Eradicate Pandemics
+# STOP
+Support The Obliteration of Pandemics
+
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
