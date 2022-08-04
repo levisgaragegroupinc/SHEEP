@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 // import schema from Projects.js
-const projectSchema = require("./Projects");
+const projectSchema = require("./Project");
 
 const userSchema = new Schema(
   {
@@ -13,11 +13,6 @@ const userSchema = new Schema(
     lastName: {
       type: String,
       required: true,
-    },
-    username: {
-      type: String,
-      required: true,
-      unique: true,
     },
     email: {
       type: String,
@@ -36,6 +31,12 @@ const userSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: "Project",
+      },
+    ],
+    orders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Orders",
       },
     ],
   },
