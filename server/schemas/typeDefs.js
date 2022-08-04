@@ -35,7 +35,7 @@ const typeDefs = gql`
     lastName: String!
     email: String!
     dollarsDonated: Float
-    projectsFunded: Int
+    projectsFunded: [Project]
     orders: [Order]
   }
 
