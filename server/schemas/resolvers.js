@@ -1,30 +1,24 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Fund, Category, Donation } = require("../models");
+const { User, Category, Project, Order, Product } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolvers = {
   Query: {
     categories: async () => {
-      return await Category.find();
+      return await Category.findAll().populate("project");
     },
-    funds: async (parent, { category, name }) => {
-      const params = {};
-
-      if (category) {
-        params.category = category;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
-
-      return await Product.find(params).populate("category");
+    projects: async () => {
+      return await Project.findAll().populate("product");
     },
-    fund: async (parent, { _id }) => {
-      return await Product.findById(_id).populate("category");
+    project: async (parent, { _id }) => {
+      return await Project.findById(_id).populate("product");
+    },
+    products: async () => {
+      return await Product.findAll();
+    },
+    product: async (parent, { _id }) => {
+      return await Product.findById(_id);
     },
     user: async (parent, args, context) => {
       if (context.user) {
@@ -96,10 +90,10 @@ const resolvers = {
 
       return { token, user };
     },
-    addDonation: async (parent, { products }, context) => {
+    addOrder: async (parent, { price }, context) => {
       console.log(context);
       if (context.user) {
-        const order = new Order({ products });
+        const order = new Order({ price });
 
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
@@ -115,6 +109,13 @@ const resolvers = {
         return await User.findByIdAndUpdate(context.user._id, args, {
           new: true,
         });
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
+    updateProduct: async (parent, { _id, name, price }, context) => {
+      if (context.user) {
+        return await Product.findByIdAndUpdate(_id, name, price, { new: true });
       }
 
       throw new AuthenticationError("Not logged in");
