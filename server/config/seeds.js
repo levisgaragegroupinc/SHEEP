@@ -38,7 +38,7 @@ db.once("open", async () => {
       name: "Biofilm Research for Microbial Resistant Organisms",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "url",
+      image: "fa-solid fa-heart",
       products: product[0]._id,
       category: categories[0]._id,
     },
@@ -46,7 +46,7 @@ db.once("open", async () => {
       name: "Antibiotics for Vancomycin Staphylococcus Aureus",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "url",
+      image: "fa-solid fa-heart",
       products: product[0]._id,
       category: categories[0]._id,
     },
@@ -54,7 +54,7 @@ db.once("open", async () => {
       name: "Optimizing E-coli for Insulin Production",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "url",
+      image: "fa-solid fa-heart",
       products: product[0]._id,
       category: categories[0]._id,
     },
@@ -62,7 +62,7 @@ db.once("open", async () => {
       name: "Use of Bacteriophages to Eliminate Pathogens",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "url",
+      image: "fa-solid fa-heart",
       products: product[0]._id,
       category: categories[0]._id,
     },
