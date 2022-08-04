@@ -4,3 +4,4 @@ node_modules
 .env
 .eslintcache
 _hidden
+package-lock.json
