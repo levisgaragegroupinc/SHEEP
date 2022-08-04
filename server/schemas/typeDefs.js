@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Category {
     _id: ID
     name: String
+    projects: [Project]
   }
 
   type Project {
@@ -12,19 +13,19 @@ const typeDefs = gql`
     description: String
     image: String
     products: [Product]
+    category: Category
   }
 
   type Product {
     _id: ID
     name: String
     price: Float
-    category: Category
   }
 
   type Order {
     _id: ID
     purchaseDate: String
-    products: [Products]
+    product: Product
   }
 
   type User {
@@ -33,7 +34,8 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    fundedCount: Int
+    dollarsDonated: Float
+    projectsFunded: Int
     orders: [Order]
   }
 

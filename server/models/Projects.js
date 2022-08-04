@@ -1,25 +1,29 @@
+const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
-// schema for the User's projects `fundedHistory` array in User.js
+// schema for the User's projects array in User.js
 const projectSchema = new Schema({
-  projectId: {
+  name: {
     type: String,
     required: true,
   },
-  projectTitle: {
+  description: {
     type: String,
     required: true,
   },
-  projectDescription: {
+  image: {
     type: String,
+  },
+  link: {
+    type: String,
+  },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: "Category",
     required: true,
-  },
-  projectImage: {
-    type: String,
-  },
-  projectLink: {
-    type: String,
   },
 });
+
+const Project = mongoose.model("Project", projectSchema);
 
 module.exports = projectSchema;

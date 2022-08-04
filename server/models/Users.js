@@ -6,6 +6,14 @@ const projectSchema = require("./Projects");
 
 const userSchema = new Schema(
   {
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
     username: {
       type: String,
       required: true,
@@ -21,8 +29,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    // set to total dollars donated from all user orders
+    dollarsDonated: {},
     // set funded to be an array of data that adheres to the projectSchema
-    funded: [projectSchema],
+    projectsFunded: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Project",
+      },
+    ],
   },
   // set this to use virtual below
   {
@@ -47,9 +62,14 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-// when we query a user, we'll also get another field called `fundedCount` with the number of projecst the user has funded.
-userSchema.virtual("fundedCount").get(function () {
-  return this.funded.length;
+// Add a virtual that goes through the orders and sums the total amount donated
+userSchema.virtual("dollarsDonates").get(function () {
+  return this.orders.length;
+});
+
+// when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
+userSchema.virtual("projectsFunded").get(function () {
+  return this.projectsFunded.length;
 });
 
 const User = model("User", userSchema);
