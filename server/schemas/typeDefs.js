@@ -10,8 +10,8 @@ const typeDefs = gql`
     _id: ID
     username: String!
     email: String!
-    projectsFundedCount: Int
-    fundHistory: [FundHistory]
+    fundedCount: Int
+    funded: [FundHistory]
   }
   type Auth {
     token: ID!
