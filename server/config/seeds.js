@@ -39,7 +39,7 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "url",
-      products: products[0]._id,
+      products: product[0]._id,
       category: categories[0]._id,
     },
     {
@@ -47,7 +47,7 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "url",
-      products: products[0]._id,
+      products: product[0]._id,
       category: categories[0]._id,
     },
     {
@@ -55,7 +55,7 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "url",
-      products: products[0]._id,
+      products: product[0]._id,
       category: categories[0]._id,
     },
     {
@@ -63,7 +63,7 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "url",
-      products: products[0]._id,
+      products: product[0]._id,
       category: categories[0]._id,
     },
   ]);
@@ -74,17 +74,25 @@ db.once("open", async () => {
 
   await User.create({
     firstName: "Josh",
-    lastname: "Brolin",
+    lastName: "Brolin",
     email: "brolin@testmail.com",
     password: "password12345",
-    orders: [
-      {
-        product: product[0]._id,
-        project: project[0].id,
-      },
-    ],
+    // orders: [
+    //   {
+    //     product: product[0]._id,
+    //   },
+    //   {
+    //     project: projects[0]._id,
+    //   },
+    // ],
     dollarsDonated: 4200,
-    projectsFunded: 1,
+    // projectsFunded: [
+    //   {
+    //     project: {
+    //       _id: projects[0]._id,
+    //     },
+    //   },
+    // ],
   });
 
   console.log("user seeded");
