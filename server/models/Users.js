@@ -64,7 +64,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // Add a virtual that goes through the orders and sums the total amount donated
-// userSchema.virtual("dollarsDonates").get(function () {
+// userSchema.virtual("dollarsDonated").get(function () {
 //   return this.orders.length;
 // });
 
