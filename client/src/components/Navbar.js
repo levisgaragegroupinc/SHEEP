@@ -1,15 +1,15 @@
 import logo from "../images/Sheep-logos.jpeg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  //styles
   const styles = {
     imgStyle: {
-      width: "8rem",
-      height: "8rem",
-      borderRadius: "30px",
+      width: "7rem",
+      height: "7rem",
+      borderRadius: "50px",
     },
     mainContainerStyle: {
-      height: "10vh",
+      height: "15vh",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
@@ -24,8 +24,10 @@ const Navbar = () => {
     buttonContainerStyle: {
       height: "100%",
       display: "flex",
+      flexDirection: "column",
       justifyContent: "space-around",
-      alignItems: "flex-end",
+      alignItems: "center",
+      marginRight: ".5rem"
     },
   };
   return (
@@ -42,9 +44,10 @@ const Navbar = () => {
         <h3>Support Helping End and Eradicate Pandemics</h3>
       </div>
       <div style={styles.buttonContainerStyle}>
-        <button>Login</button>
-        <button>Signup</button>
-        <button>Myprofile</button>
+        <h3>Login</h3>
+        <h3>Signup</h3>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/profile"}>Profile</Link>
       </div>
     </div>
   );
