@@ -115,6 +115,7 @@ const ProfilePage = () => {
             &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
           </div>
           <div style={styles.redeemStyle}>
+            <p>Amoebae Count:</p>
             <button>redeem</button>
             <p>*redeem 100 amoebae for a free plushie</p>
           </div>
