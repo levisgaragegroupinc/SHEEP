@@ -1,4 +1,4 @@
-import logo from "../images/Sheep-logos.jpeg";
+import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -16,8 +16,8 @@ const Navbar = () => {
       alignItems: "center"
     },
     imgStyle: {
-      width: "7rem",
-      height: "7rem",
+      width: "10rem",
+      height: "5rem",
       borderRadius: "10px",
       margin: ".5rem"
     },
@@ -49,12 +49,12 @@ const Navbar = () => {
         <img
           style={styles.imgStyle}
           src={logo}
-          alt="Virus Cell Molecule with SHEEP to the right"
+          alt="Virus Cell Molecule with STOP to the right"
         ></img>
       </div>
       <div style={styles.titleContainerStyle}>
-        <h1>SHEEP</h1>
-        <h3>Support Helping End and Eradicate Pandemics</h3>
+        <h1>STOP</h1>
+        <h3>Support The Obliteration of Pandemics</h3>
       </div>
       <div style={styles.linksContainerStyle}>
         <h3 style={styles.loginStyle}>Login</h3>
