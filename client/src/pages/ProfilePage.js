@@ -27,9 +27,9 @@ const ProfilePage = () => {
   return (
     <div style={styles.mainContainerStyle}>
       <div style={styles.infoContainerStyle}>
+        <div>
           <div>
-          <div>
-          <h1>Personal Information</h1>
+            <h1>Personal Information</h1>
             <p>UserName:</p>
             <button>change UserName</button>
           </div>
