@@ -8,6 +8,7 @@ const Navbar = () => {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
+      borderBottom: ".2rem solid black"
     },
     imgContainerStyle: {
       height: "100%",

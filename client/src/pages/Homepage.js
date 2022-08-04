@@ -17,7 +17,8 @@ const Homepage = () => {
       flexDirection: "column",
       justifyContent: "space-around",
       alignItems: "center",
-      margin: "10px",
+      margin: "1rem",
+      border: ".1rem solid black"
     },
     contributeContainerStyles: {
       width: "100%",

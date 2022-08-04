@@ -18,7 +18,7 @@ const Donate = () => {
     }
   return (
     <div style={style.mainContainerStyle}>
-      Donate Page
+      project page
     </div>
   )
 }
