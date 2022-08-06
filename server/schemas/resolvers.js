@@ -29,19 +29,27 @@ const resolvers = {
     product: async (parent, { _id }) => {
       return await Product.findById(_id);
     },
+    users: async (parent, args, context) => {
+      return await User.find().populate({
+        path: "user.orders",
+        populate: "orders",
+        strictPopulate: false,
+      });
+    },
     user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
+      // if (context.user) {
 
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+      const user = await User.findById(context.user._id).populate({
+        path: "user.orders",
+        populate: "orders",
+        strictPopulate: false,
+      });
+      //   user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-        return user;
-      }
+      return user;
+      // }
 
-      throw new AuthenticationError("Not logged in");
+      // throw new AuthenticationError("Not logged in");
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
