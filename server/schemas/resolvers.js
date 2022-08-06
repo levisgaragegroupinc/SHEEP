@@ -26,32 +26,26 @@ const resolvers = {
     users: async (parent, args, context) => {
       return await User.find();
     },
+    //tested works
     user: async (parent, { _id }, context) => {
       // return await (await User.findOne({ _id })).populate("orders");
       // for the login stuff - above is just to confirm it works
       if (context.user) {
-        const user = await User.findOne(context.user._id).populate("orders");
+        const user = await User.findOne({ _id: context.user._id }).populate(
+          "orders"
+        );
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
         return user;
       }
 
       throw new AuthenticationError("Not logged in");
     },
-    order: async (parent, { _id }, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id);
-
-        return user.orders.id(_id);
-      }
-
-      throw new AuthenticationError("Not logged in");
-    },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const order = new Order({ product: args.product });
       const line_items = [];
 
-      const { products } = await order.populate("products");
+      const { products } = await order.populate("product");
 
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({
@@ -84,18 +78,22 @@ const resolvers = {
     },
   },
   Mutation: {
+    //tested works
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
 
       return { token, user };
     },
-    addOrder: async (parent, { price }, context) => {
+
+    //tested works
+    addOrder: async (parent, { product, project }, context) => {
       if (context.user) {
-        const order = new Order({ price });
+        const order = new Order({ product, project });
+        console.log(order);
 
         await User.findOneAndUpdate(context.user._id, {
-          $push: { orders: order },
+          $push: { orders: order._id },
         });
 
         return order;
@@ -103,15 +101,17 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    //tested works
     updateUser: async (parent, args, context) => {
       if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, {
+        return await User.findOneAndUpdate(context.user._id, args, {
           new: true,
         });
       }
 
       throw new AuthenticationError("Not logged in");
     },
+    //tested works
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
