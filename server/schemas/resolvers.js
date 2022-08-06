@@ -1,8 +1,8 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { User, Category, Project, Order, Product } = require("../models");
 const { signToken } = require("../utils/auth");
-// require("dotenv").config();
-// const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const resolvers = {
   Query: {
