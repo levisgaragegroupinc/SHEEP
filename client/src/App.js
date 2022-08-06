@@ -8,6 +8,7 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
+<<<<<<< HEAD
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
@@ -57,6 +58,29 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+=======
+import Navbar from "./components/Navbar";
+import ProfilePage from "./pages/ProfilePage";
+import Homepage from "./pages/Homepage";
+import ProjectPage from "./pages/ProjectPage";
+import DonatePage from "./pages/Donate";
+import SuccessPage from "./pages/SuccessPage";
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/projectPage" element={<ProjectPage />} />
+          <Route path="/donate" element={<DonatePage />} />
+          <Route path="/success" element={<SuccessPage />} />
+        </Routes>
+      </div>
+    </Router>
+>>>>>>> 5b4e82c (added temp sucess page)
   );
 }
 

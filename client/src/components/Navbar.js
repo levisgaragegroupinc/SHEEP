@@ -63,6 +63,8 @@ const Navbar = () => {
         <h3 style={styles.loginStyle}>Signup</h3>
         <h3 style={styles.loginStyle}>or Logout</h3>
       </div>
+      {/* temp sucesspage move to swipe success return link */}
+      <Link to={"/success"}>Temp SuccessPage</Link>
     </div>
   );
 };
