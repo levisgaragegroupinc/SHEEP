@@ -79,7 +79,7 @@ In order to create this application, we used the skills we have at the moment. W
 For any question, please contact us on GitHub at: 
 - [Travis Bates](https://github.com/levisgaragegroupinc)
 - [Natalie Bulger](https://github.com/nbulger1)
-- [Isaac Luton]()
+- [Isaac Luton](https://github.com/ILuton)
 - [April Reitan](https://github.com/areitan)
 
 ---
