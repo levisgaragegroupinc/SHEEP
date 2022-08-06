@@ -33,7 +33,7 @@ export const QUERY_PROJECTS = gql`
 `;
 
 export const QUERY_ALL_PROJECTS = gql`
-  {
+  query Query {
     projects {
       _id
       name
@@ -45,6 +45,7 @@ export const QUERY_ALL_PROJECTS = gql`
         price
       }
       category {
+        _id
         name
       }
     }
@@ -91,20 +92,13 @@ export const QUERY_SINGLE_PRODUCT = gql`
 `;
 
 export const QUERY_CATEGORIES = gql`
-  {
+  query Query {
     categories {
       _id
       name
       projects {
         _id
         name
-        description
-        image
-        products {
-          _id
-          name
-          price
-        }
       }
     }
   }
