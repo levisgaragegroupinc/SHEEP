@@ -25,7 +25,7 @@
  
  This is an MVC application built with the following technologies:
  - [Express.js](https://www.npmjs.com/package/express)
- - [dotenv](https://www.npmjs.com/package/dotenv) package
+ - [dotenv](https://www.npmjs.com/package/dotenv)
  - [Heroku](https://signup.heroku.com/)
  - [React](https://reactjs.org/docs/getting-started.html)
  - [Apollo](https://www.apollographql.com/docs/)
