@@ -58,7 +58,7 @@
 ---
 ## Tests
 
-Testing was done by manually entering data as a user would.
+Testing was done by manually entering data as a user would. Queries were tested in Apollo.
 
 
 --- 
