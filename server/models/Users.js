@@ -64,14 +64,14 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // Add a virtual that goes through the orders and sums the total amount donated
-// userSchema.virtual("dollarsDonated").get(function () {
-//   let donation = 0;
-//   this.orders.map((order) => {
-//     let dollarAmount = order.product.price;
-//     donation += dollarAmount;
-//   });
-//   return donation;
-// });
+userSchema.virtual("dollarsDonated").get(function () {
+  let donation = 0;
+  this.orders.map((order) => {
+    let dollarAmount = order.product.price;
+    donation += dollarAmount;
+  });
+  return donation;
+});
 
 // when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
 // userSchema.virtual("projectsFunded").get(function () {
