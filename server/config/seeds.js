@@ -102,23 +102,19 @@ db.once("open", async () => {
     password: "password12345",
     orders: [order[0]._id],
     dollarsDonated: 4200,
+    projectsFunded: [projects[0]._id],
   });
 
   // Natasha
-  // await User.create({
-  //   firstName: "Natasha",
-  //   lastName: "Romanof",
-  //   email: "natasha@testmail.com",
-  //   password: "password12345",
-  //   orders: [
-  //     {
-  //       product: product[0]._id,
-  //       project: projects[0]._id,
-  //     },
-  //   ],
-  //   dollarsDonated: 4200,
-  //   projectsFunded: [{ project: projects[0]._id }],
-  // });
+  await User.create({
+    firstName: "Natasha",
+    lastName: "Romanof",
+    email: "natasha@testmail.com",
+    password: "password12345",
+    orders: [order[1]._id],
+    dollarsDonated: 4200,
+    projectsFunded: [projects[0]._id, projects[1]._id],
+  });
 
   // Chris
   await User.create({
