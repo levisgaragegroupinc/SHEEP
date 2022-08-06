@@ -1,10 +1,10 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-
   type Category {
     _id: ID
     name: String
+    projects: [Project]
   }
 
   type Project {
@@ -12,35 +12,34 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
-    products: Product
+    product: [Product]
+    category: Category
   }
 
   type Product {
-  _id: ID
-  price: Float
-  category: Category
+    _id: ID
+    name: String
+    price: Float
   }
 
   type Order {
     _id: ID
     purchaseDate: String
-    product: [Products]
+    product: Product
+    project: Project
   }
 
   type User {
     _id: ID
-    username: String!
+    firstName: String!
+    lastName: String!
     email: String!
-    fundedCount: Int
-    funded: [FundHistory]
+    dollarsDonated: Float
+    allDollarsDonated: Float
+    projectsFunded: [Project]
     orders: [Order]
   }
 
-  type FundHistory {
-    projectId: String!
-    projectTitle: String!
-    projectDescription: String
-  }
   type Checkout {
     session: ID
   }
@@ -50,13 +49,29 @@ const typeDefs = gql`
     user: User
   }
   type Query {
-    me: User
     categories: [Category]
-    projects()
+    category(_id: ID!): Category
+    project(_id: ID!): Project
+    product(_id: ID!): Product
+    users: [User]
+    user(_id: ID!): User
+    checkout(product: ID!): Checkout
   }
   type Mutation {
+    addUser(
+      firstName: String!
+      lastName: String!
+      email: String!
+      password: String!
+    ): Auth
+    addOrder(product: ID!, project: ID!): Order
+    updateUser(
+      firstName: String
+      lastName: String
+      email: String
+      password: String
+    ): User
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
   }
 `;
 

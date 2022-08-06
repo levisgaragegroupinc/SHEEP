@@ -2,14 +2,17 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 // import schema from Projects.js
-const projectSchema = require("./Projects");
+const projectSchema = require("./Project");
 
 const userSchema = new Schema(
   {
-    username: {
+    firstName: {
       type: String,
       required: true,
-      unique: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
     },
     email: {
       type: String,
@@ -21,8 +24,21 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    // set to total dollars donated from all user orders
+    dollarsDonated: Number,
     // set funded to be an array of data that adheres to the projectSchema
-    funded: [projectSchema],
+    projectsFunded: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Project",
+      },
+    ],
+    orders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Order",
+      },
+    ],
   },
   // set this to use virtual below
   {
@@ -47,10 +63,38 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-// when we query a user, we'll also get another field called `fundedCount` with the number of projecst the user has funded.
-userSchema.virtual("fundedCount").get(function () {
-  return this.funded.length;
-});
+// Add a virtual that goes through the orders and sums the total amount donated
+userSchema
+  .virtual("allDollarsDonated", {
+    ref: "Order",
+    localField: "product._id",
+    foreignField: "product",
+  })
+  .get(function () {
+    console.log("orders", this.orders);
+
+    let donation = 0;
+    this.orders.map((order) => {
+      console.log("order", order);
+      let dollarAmount = order.product.price;
+      donation += dollarAmount;
+      console.log("donation", donation);
+    });
+    if (donation === NaN) {
+      return 0;
+    }
+    return donation;
+  });
+
+// populate virtual
+// userSchema.virtual("orders", {
+//   ref: "orders"
+// })
+
+// when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
+// userSchema.virtual("projectsFunded").get(function () {
+//   return this.projectsFunded.length;
+// });
 
 const User = model("User", userSchema);
 

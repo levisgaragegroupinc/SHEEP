@@ -1,63 +1,51 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Fund, Category, Donation } = require("../models");
+const { User, Category, Project, Order, Product } = require("../models");
 const { signToken } = require("../utils/auth");
-const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
+require("dotenv").config();
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const resolvers = {
   Query: {
+    // tested works
     categories: async () => {
       return await Category.find();
     },
-    funds: async (parent, { category, name }) => {
-      const params = {};
-
-      if (category) {
-        params.category = category;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
-
-      return await Product.find(params).populate("category");
+    // tested works
+    category: async (parent, { _id }) => {
+      return await (await Category.findOne({ _id })).populate("projects");
     },
-    fund: async (parent, { _id }) => {
-      return await Product.findById(_id).populate("category");
+    //tested works
+    project: async (parent, { _id }) => {
+      return await (await Project.findOne({ _id })).populate("product");
     },
-    user: async (parent, args, context) => {
+    //tested works
+    product: async (parent, { _id }) => {
+      return await Product.findOne({ _id });
+    },
+    //tested works
+    users: async (parent, args, context) => {
+      return await User.find();
+    },
+    //tested works
+    user: async (parent, { _id }, context) => {
+      // return await (await User.findOne({ _id })).populate("orders");
+      // for the login stuff - above is just to confirm it works
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
-
+        const user = await User.findOne({ _id: context.user._id }).populate(
+          "orders"
+        );
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
         return user;
       }
 
       throw new AuthenticationError("Not logged in");
     },
-    order: async (parent, { _id }, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
-
-        return user.orders.id(_id);
-      }
-
-      throw new AuthenticationError("Not logged in");
-    },
-    donate: async (parent, args, context) => {
+    checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const order = new Order({ product: args.product });
       const line_items = [];
 
-      const { products } = await order.populate("products");
+      const { products } = await order.populate("product");
 
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({
@@ -90,19 +78,22 @@ const resolvers = {
     },
   },
   Mutation: {
+    //tested works
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
 
       return { token, user };
     },
-    addDonation: async (parent, { products }, context) => {
-      console.log(context);
-      if (context.user) {
-        const order = new Order({ products });
 
-        await User.findByIdAndUpdate(context.user._id, {
-          $push: { orders: order },
+    //tested works
+    addOrder: async (parent, { product, project }, context) => {
+      if (context.user) {
+        const order = new Order({ product, project });
+        console.log(order);
+
+        await User.findOneAndUpdate(context.user._id, {
+          $push: { orders: order._id },
         });
 
         return order;
@@ -110,15 +101,17 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+    //tested works
     updateUser: async (parent, args, context) => {
       if (context.user) {
-        return await User.findByIdAndUpdate(context.user._id, args, {
+        return await User.findOneAndUpdate(context.user._id, args, {
           new: true,
         });
       }
 
       throw new AuthenticationError("Not logged in");
     },
+    //tested works
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

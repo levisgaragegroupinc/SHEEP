@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* div {
+  border: 1px solid black;
+} */
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
