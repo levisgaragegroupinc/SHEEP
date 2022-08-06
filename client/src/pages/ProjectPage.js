@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ProjectPage = () => {
-  const style = {
+  const styles = {
     mainContainerStyle: {
       height: "85vh",
       display: "flex",
@@ -11,7 +11,7 @@ const ProjectPage = () => {
     },
   };
   return (
-    <div style={style.mainContainerStyle}>
+    <div style={styles.mainContainerStyle}>
       <div>Project Title</div>
       <div>Project Image</div>
       <div>Project Decription</div>

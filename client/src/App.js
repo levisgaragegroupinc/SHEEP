@@ -5,6 +5,7 @@ import ProfilePage from "./pages/ProfilePage";
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
 import DonatePage from "./pages/Donate";
+import SuccessPage from "./pages/SuccessPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/projectPage" element={<ProjectPage />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </div>
     </Router>
