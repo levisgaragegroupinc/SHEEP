@@ -72,19 +72,26 @@ db.once("open", async () => {
 
   await User.deleteMany();
 
+  //   await User.create({
+  //     firstName: "Josh",
+  //     lastName: "Brolin",
+  //     email: "brolin@testmail.com",
+  //     password: "password12345",
+  //     orders: [
+  //       {
+  //         product: product[0]._id,
+  //         project: project[0]._id,
+  //       },
+  //     ],
+  //     dollarsDonated: 4200,
+  //     projectsFunded: [{ project: project[0]._id }],
+  //   });
+
   await User.create({
-    firstName: "Josh",
-    lastName: "Brolin",
-    email: "brolin@testmail.com",
+    firstName: "Chris",
+    lastName: "Hemsworth",
+    email: "hemsworth@testmail.com",
     password: "password12345",
-    orders: [
-      {
-        product: product[0]._id,
-        project: project[0]._id,
-      },
-    ],
-    dollarsDonated: 4200,
-    projectsFunded: [{ project: project[0]._id }],
   });
 
   console.log("user seeded");
