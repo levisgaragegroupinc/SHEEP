@@ -48,6 +48,7 @@ const typeDefs = gql`
     user: User
   }
   type Query {
+    projects: [Project]
     categories: [Category]
     category(_id: ID!): Category
     project(_id: ID!): Project

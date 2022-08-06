@@ -15,6 +15,17 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 
+export const QUERY_All_PROJECTS = gql`
+query Projects {
+  projects {
+    _id
+    name
+    description
+    image
+  }
+}
+`;
+
 export const QUERY_SINGLE_CATEGORY = gql`
   query Query($id: ID!) {
     category(_id: $id) {
@@ -109,3 +120,6 @@ export const QUERY_CHECKOUT = gql`
     }
   }
 `;
+
+
+

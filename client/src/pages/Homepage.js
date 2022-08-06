@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useQuery } from '@apollo/client';
+
+import { QUERY_All_PROJECTS } from '../utils/queries';
 
 const Homepage = () => {
+
+  const { loading, data } = useQuery(QUERY_All_PROJECTS);
+
+  const projects = data?.projects || [];
+
+
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -28,19 +37,16 @@ const Homepage = () => {
     },
   };
   return (
-
     <div style={styles.mainContainerStyle}>
-      {/* // to do map through db and render out projects. have link change depending on project id cliked on */}
-      <div style={styles.projectStyle}>
-        <p>Cool Project</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/projectPage">View Project</Link>
-      </div>
-      
+     {projects && projects.map((project) => (
+          <div key={project._id} style={styles.projectStyle}>
+            <p>{project.name}</p>
+            <p>{project.img}</p>
+            <div style={styles.contributeContainerStyles}></div>
+            <p>{project.description}</p>
+            <Link to="/projectPage">View Project</Link>
+          </div>
+        ))}
     </div>
   );
 };

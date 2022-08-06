@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ProjectPage = () => {
+const Projects = () => {
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -22,4 +22,4 @@ const ProjectPage = () => {
   );
 };
 
-export default ProjectPage;
+export default Projects;
