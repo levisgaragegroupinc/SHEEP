@@ -1,16 +1,13 @@
-# STOP
-Support The Obliteration of Pandemics
-
+# STOP: Support The Obliteration of Pandemics
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 ## Description
 
+  The last couple of years have heightened our understanding of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
 
-  
-
-  [Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
+  [STOP: Support The Obliteration of Pandemics Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 
 ---
 ## Table of Contents
@@ -25,24 +22,34 @@ Support The Obliteration of Pandemics
 
 ---
 ## Installation
-
+ 
  This is an MVC application built with the following technologies:
  - [Express.js](https://www.npmjs.com/package/express)
  - [dotenv](https://www.npmjs.com/package/dotenv) package
  - [Heroku](https://signup.heroku.com/)
+ - [React](https://reactjs.org/docs/getting-started.html)
+ - [Apollo](https://www.apollographql.com/docs/)
+ - [GraphQL](https://graphql.org/learn/)
+ - [Node.js](https://nodejs.org/en/)
+ - [MongoDB](https://www.mongodb.com/)
+ - [Mongoose](https://mongoosejs.com/docs/)
+ - [JSON Web Tokens](https://jwt.io/)
+ - [Stripe payment platform](https://stripe.com/docs)
+ - Responsive design
 
 
 ### Application Links
 
-- [SHEEP: Support Helping End and Eradicate Pandemics Git Hub Repository](https://github.com/levisgaragegroupinc/SHEEP)
-- [SHEEP: Support Helping End and Eradicate Pandemics Deployed Link]()
-- [SHEEP: Support Helping End and Eradicate Pandemics Presentation Slides](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
+- [STOP: Support The Obliteration of Pandemics Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
+- [STOP: Support The Obliteration of Pandemics Git Hub Repository](https://github.com/levisgaragegroupinc/SHEEP)
+- [STOP: Support The Obliteration of Pandemics Deployed Link]()
+- [STOP: Support The Obliteration of Pandemics Presentation Slides](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
 
 
 ---
 ## Usage
 
-1. Go to the deplyed application: [SHEEP: Support Helping End and Eradicate Pandemics Deployed Link]()
+1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Link]()
 
 
 ### Log In or Sign up
@@ -63,6 +70,7 @@ In order to create this application, we used the skills we have at the moment. W
 ---
 ## Credits
 
+- [Stripe payment platform](https://stripe.com/docs)
 - Trilogy Education Services, LLC for example code throughout the week 22 exercises.
 
 
@@ -78,7 +86,7 @@ For any question, please contact us on GitHub at:
 
 ## License
 
-Copyright (c) ```<2022> <copyright Kiersten Zug, April Reitan, Tiffany Dempsey, Mia Borja>```
+Copyright (c) ```<2022> <copyright Travis Bates, Natalie Bulger, Isaac Luton, April Reitan>```
 
 MIT License:
 Permission is hereby granted, free of charge, to any person obtaining a copy
