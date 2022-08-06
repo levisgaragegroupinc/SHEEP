@@ -52,7 +52,7 @@ function ProductItem(item) {
         <div>{quantity} {pluralize("item", quantity)} Still a threat</div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to Petri Dish</button>
+      <button onClick={addToCart}>Add to Petri Dish 🦠</button>
     </div>
   );
 }
