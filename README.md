@@ -42,14 +42,14 @@
 
 - [STOP: Support The Obliteration of Pandemics Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 - [STOP: Support The Obliteration of Pandemics Git Hub Repository](https://github.com/levisgaragegroupinc/SHEEP)
-- [STOP: Support The Obliteration of Pandemics Deployed Link]()
+- [STOP: Support The Obliteration of Pandemics Deployed Link](https://git.heroku.com/serene-dawn-83584.git)
 - [STOP: Support The Obliteration of Pandemics Presentation Slides](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
 
 
 ---
 ## Usage
 
-1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Link]()
+1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Link](https://git.heroku.com/serene-dawn-83584.git)
 
 
 ### Log In or Sign up
