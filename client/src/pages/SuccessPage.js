@@ -14,7 +14,7 @@ const SuccessPage = () => {
     <div style={styles.mainContainerStyle}>
         <h1>Thank You for you donation!</h1>
         <p>ameobas earned (link to profile)</p>
-        <p>link to home</p>
+        <p>link to home page</p>
 
     </div>
   )
