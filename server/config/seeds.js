@@ -70,21 +70,58 @@ db.once("open", async () => {
 
   console.log("projects seeded!");
 
+  await Order.deleteMany();
+
+  const order = await Order.create([
+    {
+      purchaseDate: "08-06-2022",
+      product: product[0]._id,
+      project: projects[0]._id,
+    },
+    {
+      purchaseDate: "08-07-2022",
+      product: product[0]._id,
+      project: projects[0]._id,
+    },
+    {
+      purchaseDate: "08-08-2022",
+      product: product[0]._id,
+      project: projects[0]._id,
+    },
+  ]);
+
+  console.log("order seeded!");
+
   await User.deleteMany();
 
+  // Josh
   await User.create({
     firstName: "Josh",
     lastName: "Brolin",
     email: "brolin@testmail.com",
     password: "password12345",
-    orders: [
-      {
-        product: product[0]._id,
-        project: project[0]._id,
-      },
-    ],
+    orders: [order[0]._id],
     dollarsDonated: 4200,
-    projectsFunded: [{ project: project[0]._id }],
+    projectsFunded: [projects[0]._id],
+  });
+
+  // Natasha
+  await User.create({
+    firstName: "Natasha",
+    lastName: "Romanof",
+    email: "natasha@testmail.com",
+    password: "password12345",
+    orders: [order[1]._id],
+    dollarsDonated: 4200,
+    projectsFunded: [projects[0]._id, projects[1]._id],
+  });
+
+  // Chris
+  await User.create({
+    firstName: "Chris",
+    lastName: "Hemsworth",
+    email: "hemsworth@testmail.com",
+    password: "password12345",
   });
 
   console.log("user seeded");
