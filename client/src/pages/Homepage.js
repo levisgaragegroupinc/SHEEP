@@ -6,9 +6,8 @@ const Homepage = () => {
       height: "85vh",
       display: "flex",
       justifyContent: "center",
-      alignItems:"center",
-      flexWrap: "wrap"
-
+      alignItems: "center",
+      flexWrap: "wrap",
     },
     projectStyle: {
       height: "30%",
@@ -18,7 +17,7 @@ const Homepage = () => {
       justifyContent: "space-around",
       alignItems: "center",
       margin: "1rem",
-      border: ".1rem solid black"
+      border: ".1rem solid black",
     },
     contributeContainerStyles: {
       width: "100%",
@@ -29,7 +28,9 @@ const Homepage = () => {
     },
   };
   return (
+
     <div style={styles.mainContainerStyle}>
+      {/* // to do map through db and render out projects. have link change depending on project id cliked on */}
       <div style={styles.projectStyle}>
         <p>Cool Project</p>
         <p>Img</p>
@@ -37,53 +38,9 @@ const Homepage = () => {
           <p>$ Contributed:</p>
           <p># Contributers:</p>
         </div>
-        <Link to="/cancer">View Project</Link>
+        <Link to="/projectPage">View Project</Link>
       </div>
-      <div style={styles.projectStyle}>
-        <p>Cool Project 2</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/cancer">View Project</Link>
-      </div>
-      <div style={styles.projectStyle}>
-        <p>Cool Project 3</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/cancer">View Project</Link>
-      </div>
-      <div style={styles.projectStyle}>
-        <p>Cool Project 4</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/cancer">View Project</Link>
-      </div>
-      <div style={styles.projectStyle}>
-        <p>Cool Project 5</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/cancer">View Project</Link>
-      </div>
-      <div style={styles.projectStyle}>
-        <p>Cool Project 6</p>
-        <p>Img</p>
-        <div style={styles.contributeContainerStyles}>
-          <p>$ Contributed:</p>
-          <p># Contributers:</p>
-        </div>
-        <Link to="/cancer">View Project</Link>
-      </div>
+      
     </div>
   );
 };

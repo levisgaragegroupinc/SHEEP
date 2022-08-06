@@ -1,4 +1,3 @@
-import React from "react";
 
 const ProfilePage = () => {
   const styles = {
@@ -54,7 +53,7 @@ const ProfilePage = () => {
     updateButtonStyle: {
       margin: "1rem",
     },
-    amoebaeContainerStyle: {
+    amoebaContainerStyle: {
       display: "flex",
       flexWrap: "wrap",
       height: "70%",
@@ -88,6 +87,7 @@ const ProfilePage = () => {
     <div style={styles.mainContainerStyle}>
       <div style={styles.infoContainerStyle}>
         <div style={styles.personalInfoContainerStyle}>
+          {/* to do get personal info from db create modal popup to channg info*/}
           <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
           <div style={styles.peronalItemContainerStyle}>
             <p style={styles.personalInfoItemsStyle}>UserName:</p>
@@ -104,20 +104,16 @@ const ProfilePage = () => {
         </div>
         <div style={styles.petriDishContainerStyle}>
           <h1 style={styles.sectionTitleStyle}>Petri Dish</h1>
-          <div style={styles.amoebaeContainerStyle}>
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
+          <div style={styles.amoebaContainerStyle}>
+            {/* to do render number of aemoba and return emoji */}
             &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
             &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
           </div>
           <div style={styles.redeemStyle}>
-            <p>Amoebae Count:</p>
+            {/* to do get ameoba count */}
+            <p>Amoeba Count: 8</p>
             <button>redeem</button>
-            <p>*redeem 100 amoebae for a free plushie</p>
+            <p>*redeem 100 amoeba for a free plushie</p>
           </div>
         </div>
       </div>
@@ -129,6 +125,7 @@ const ProfilePage = () => {
             <th  style={styles.tableHeaderStyle}>Amount</th>
             <th  style={styles.tableHeaderStyle}>Date</th>
           </tr>
+          {/* to do map through and render transaction history as tr's */}
         </table>
       </div>
     </div>

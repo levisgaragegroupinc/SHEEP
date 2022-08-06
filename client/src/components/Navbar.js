@@ -54,14 +54,15 @@ const Navbar = () => {
         ></img>
       </div>
       <div style={styles.titleContainerStyle}>
-        <h1>STOP</h1>
+        <h1>S.T.O.P.</h1>
         <h3>Support The Obliteration of Pandemics</h3>
       </div>
       <div style={styles.linksContainerStyle}>
-        <h3 style={styles.loginStyle}>Login</h3>
-        <h3 style={styles.loginStyle}>Signup</h3>
         <Link to={"/"} style={styles.linksStyle}>Home</Link>
         <Link to={"/profile"} style={styles.linksStyle}>Profile</Link>
+        <h3 style={styles.loginStyle}>Login or</h3>
+        <h3 style={styles.loginStyle}>Signup</h3>
+        <h3 style={styles.loginStyle}>or Logout</h3>
       </div>
     </div>
   );
