@@ -70,6 +70,13 @@ db.once("open", async () => {
 
   console.log("projects seeded!");
 
+  // Link categories and projects
+  for (newProduct of categories) {
+    const tempCategory = categories;
+    tempCategory.projects.push(projects[0]);
+    await tempCategory.save();
+  }
+
   await Order.deleteMany();
 
   const order = await Order.create([
