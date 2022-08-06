@@ -71,6 +71,7 @@ In order to create this application, we used the skills we have at the moment. W
 ## Credits
 
 - [Stripe payment platform](https://stripe.com/docs)
+- [The  Net Ninja: Components & Templates](https://www.youtube.com/watch?v=9D1x7-2FmTA)
 - Trilogy Education Services, LLC for example code throughout the week 22 exercises.
 
 
