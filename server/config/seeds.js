@@ -5,14 +5,14 @@ db.once("open", async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: "Blood" },
-    { name: "Cancer" },
-    { name: "Cardiovascular" },
-    { name: "Congenital disorders" },
-    { name: "Ear" },
-    { name: "Eye" },
-    { name: "Infection" },
-    { name: "Reproductive" },
+    { name: "Blood", projects: [] },
+    { name: "Cancer", projects: [] },
+    { name: "Cardiovascular", projects: [] },
+    { name: "Congenital disorders", projects: [] },
+    { name: "Ear", projects: [] },
+    { name: "Eye", projects: [] },
+    { name: "Infection", projects: [] },
+    { name: "Reproductive", projects: [] },
   ]);
 
   console.log("categories seeded!");
@@ -69,6 +69,15 @@ db.once("open", async () => {
   ]);
 
   console.log("projects seeded!");
+
+  // Link categories and projects
+  let num = 0;
+  for (newProject of projects) {
+    const tempCategory = categories[num];
+    tempCategory.projects.push(newProject._id);
+    await tempCategory.save();
+    num += 1;
+  }
 
   await Order.deleteMany();
 
