@@ -25,7 +25,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set to total dollars donated from all user orders
-    dollarsDonated: 0,
+    dollarsDonated: Number,
     // set funded to be an array of data that adheres to the projectSchema
     projectsFunded: [
       {
@@ -64,14 +64,32 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // Add a virtual that goes through the orders and sums the total amount donated
-// userSchema.virtual("dollarsDonated").get(function () {
-//   let donation = 0;
-//   this.orders.map((order) => {
-//     let dollarAmount = order.product.price;
-//     donation += dollarAmount;
-//   });
-//   return donation;
-// });
+userSchema
+  .virtual("allDollarsDonated", {
+    ref: "Order",
+    localField: "product._id",
+    foreignField: "product",
+  })
+  .get(function () {
+    console.log("orders", this.orders);
+
+    let donation = 0;
+    this.orders.map((order) => {
+      console.log("order", order);
+      let dollarAmount = order.product.price;
+      donation += dollarAmount;
+      console.log("donation", donation);
+    });
+    if (donation === NaN) {
+      return 0;
+    }
+    return donation;
+  });
+
+// populate virtual
+// userSchema.virtual("orders", {
+//   ref: "orders"
+// })
 
 // when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
 // userSchema.virtual("projectsFunded").get(function () {

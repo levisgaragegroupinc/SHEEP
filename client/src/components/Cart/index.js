@@ -9,7 +9,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51LTrSVC8TMpvZpf0sedUXRS4PClo9Ep07xAHUs9jOdhaFLtPAudN632XcO7dTV07DEItOh8uzuYsCq5BSkFJ9h6D00VYZLSbfZ');
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -64,7 +64,7 @@ const Cart = () => {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
-          🛒
+        🗑️
         </span>
       </div>
     );
@@ -75,7 +75,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [close]
       </div>
-      <h2>Shopping Cart</h2>
+      <h2>Petri Dish</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -86,18 +86,18 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button onClick={submitCheckout}>Donate</button>
             ) : (
-              <span>(log in to check out)</span>
+              <span>(log in to donate)</span>
             )}
           </div>
         </div>
       ) : (
         <h3>
           <span role="img" aria-label="shocked">
-            😱
+           😲
           </span>
-          You haven't added anything to your cart yet!
+          You haven't added anything to your Petri Dish yet!
         </h3>
       )}
     </div>
