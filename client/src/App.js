@@ -15,6 +15,8 @@ import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
 import DonatePage from "./pages/Donate";
 import SuccessPage from "./pages/SuccessPage";
+import SignupForm from "./pages/SignupForm";
+import LoginForm from "./pages/LoginForm";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -47,6 +49,8 @@ function App() {
           <Route path="/projectPage/:projectId" element={<ProjectPage />} />
           <Route path="/donate/:projectId" element={<DonatePage />} />
           <Route path="/success" element={<SuccessPage />} />
+          <Route path="/signup" element={<SignupForm />} />
+          <Route path="/login" element={<LoginForm />} />
         </Routes>
       </div>
     </Router>

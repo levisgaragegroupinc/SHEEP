@@ -1,5 +1,6 @@
 import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
+import  Nav  from "./Nav/index.js"
 
 const Navbar = () => {
   const styles = {
@@ -60,9 +61,7 @@ const Navbar = () => {
       <div style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>Home</Link>
         <Link to={"/profile"} style={styles.linksStyle}>Profile</Link>
-        <h3 style={styles.loginStyle}>Login or</h3>
-        <h3 style={styles.loginStyle}>Signup</h3>
-        <h3 style={styles.loginStyle}>or Logout</h3>
+        < Nav />
       </div>
       {/* temp sucesspage move to swipe success return link */}
       <Link to={"/success"}>Temp SuccessPage</Link>
