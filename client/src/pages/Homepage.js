@@ -44,7 +44,7 @@ const Homepage = () => {
             <p>{project.img}</p>
             <div style={styles.contributeContainerStyles}></div>
             <p>{project.description}</p>
-            <Link to="/projectPage">View Project</Link>
+            <Link to={`/projectPage/${project._id}`}>View Project</Link>
           </div>
         ))}
     </div>

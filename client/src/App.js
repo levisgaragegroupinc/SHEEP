@@ -44,8 +44,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/projectPage" element={<ProjectPage />} />
-          <Route path="/donate" element={<DonatePage />} />
+          <Route path="/projectPage/:projectId" element={<ProjectPage />} />
+          <Route path="/donate/:projectId" element={<DonatePage />} />
           <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </div>

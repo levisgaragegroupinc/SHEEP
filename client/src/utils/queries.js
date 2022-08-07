@@ -42,7 +42,7 @@ export const QUERY_SINGLE_CATEGORY = gql`
 `;
 
 export const QUERY_SINGLE_PROJECT = gql`
-  query Query($id: ID!) {
+  query SingleProject($id: ID!) {
     project(_id: $id) {
       _id
       name
