@@ -16,14 +16,14 @@ export const QUERY_CATEGORIES = gql`
 `;
 
 export const QUERY_All_PROJECTS = gql`
-query Projects {
-  projects {
-    _id
-    name
-    description
-    image
+  query Projects {
+    projects {
+      _id
+      name
+      description
+      image
+    }
   }
-}
 `;
 
 export const QUERY_SINGLE_CATEGORY = gql`
@@ -66,8 +66,6 @@ export const QUERY_SINGLE_PRODUCT = gql`
     }
   }
 `;
-
-
 
 export const QUERY_ALL_USERS = gql`
   query Query {
@@ -116,12 +114,9 @@ export const QUERY_SINGLE_USER = gql`
 `;
 
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($product: ID!) {
+  query Checkout($product: [ID]!) {
     checkout(product: $product) {
       session
     }
   }
 `;
-
-
-
