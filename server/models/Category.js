@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const Project = require("./Project");
-
-// import schema from Projects.js
-// const projectSchema = require("./Projects");
 
 const categorySchema = new Schema({
   name: {
