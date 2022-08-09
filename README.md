@@ -53,7 +53,7 @@ This is an MVC application built with the following technologies:
 
 ## Usage
 
-1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Heroku Link](https://git.heroku.com/serene-dawn-83584.git)
+1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://git.heroku.com/serene-dawn-83584.git)
 
 ### Log In or Sign up
 
