@@ -39,7 +39,7 @@ This is an MVC application built with the following technologies:
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/docs/)
 - [JSON Web Tokens](https://jwt.io/)
-- [Stripe payment platform](https://stripe.com/docs)
+- [Stripe](https://stripe.com/docs)
 - Responsive design
 
 ### Application Links
