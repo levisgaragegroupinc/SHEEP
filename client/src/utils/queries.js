@@ -67,6 +67,8 @@ export const QUERY_SINGLE_PRODUCT = gql`
   }
 `;
 
+
+
 export const QUERY_ALL_USERS = gql`
   query Query {
     users {

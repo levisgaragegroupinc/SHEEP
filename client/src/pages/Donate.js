@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { useLazyQuery} from "@apollo/client";
+import { useLazyQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-
 
 import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 import { QUERY_CHECKOUT } from "../utils/queries";
 
-
 const Donate = () => {
-
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -47,6 +44,14 @@ const Donate = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  // const { loadingProducts, dataProducts } = useQuery(QUERY_ALL_PRODUCTS);
+
+  // const products = dataProducts?.project || {};
+
+  // if (loadingProducts) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <div>
