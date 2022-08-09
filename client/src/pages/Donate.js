@@ -1,8 +1,11 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { useLazyQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
+import Cart from "../components/Cart";
+import ProductList from "../components/ProductList";
 
 import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 import { QUERY_CHECKOUT } from "../utils/queries";
@@ -49,28 +52,12 @@ const Donate = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-
   console.log(project);
 
   return (
     <div>
-      <div style={styles.mainContainerStyle}>
-        <div style={styles.projectContainerStyle}>
-          <h1>{project.name}</h1>
-          <h1>{project.img}</h1>
-        </div>
-        <div style={styles.donateContainerStyle}>
-          <p>How much would u like to contribute?</p>
-          {project.product.map((project) => (
-            <div key={project._id} style={styles.projectStyle}>
-              <button>{project.name} {project.price}</button>
-            </div>
-          ))}
-          <div>
-            <button>Continue to payment</button>
-          </div>
-        </div>
-      </div>
+      <ProductList />
+      <Cart />
     </div>
   );
 };
