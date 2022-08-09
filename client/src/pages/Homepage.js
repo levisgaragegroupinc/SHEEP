@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
+import Auth from "../utils/auth";
 
 import { QUERY_All_PROJECTS } from '../utils/queries';
 
@@ -9,7 +10,17 @@ const Homepage = () => {
 
   const projects = data?.projects || [];
 
-
+  function viewProject(project) {
+    if (Auth.loggedIn()) {
+      return (
+        <Link to={`/projectPage/${project._id}`}>View Project</Link>
+      );
+    } else {
+      return (
+        <Link to="/login">Login to View Project</Link>
+      )
+    }
+  }
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -44,7 +55,7 @@ const Homepage = () => {
             <p>{project.img}</p>
             <div style={styles.contributeContainerStyles}></div>
             <p>{project.description}</p>
-            <Link to={`/projectPage/${project._id}`}>View Project</Link>
+            {viewProject(project)}
           </div>
         ))}
     </div>

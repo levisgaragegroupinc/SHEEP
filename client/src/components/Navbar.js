@@ -12,29 +12,25 @@ const Navbar = () => {
       );
     }
   }
-  function showHome() {
-    if (window.location.href  !== "/") {
-      return (
-        <Link to={"/"} style={styles.linksStyle}>
-          Home
-        </Link>
-      );
-    }
-  }
+
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-          <Link to="/" style={styles.linksStyle} onClick={() => Auth.logout()}>
-            Logout
-          </Link>
+        <Link to="/" style={styles.linksStyle} onClick={() => Auth.logout()}>
+          Logout
+        </Link>
       );
     } else {
-      return ( 
+      return (
         <div style={styles.linksStyle}>
-          <Link style={styles.linksStyle} to="/login">Login</Link>
-          <Link style={styles.linksStyle}to="/signup">Signup</Link> 
-          </div>
-      ) 
+          <Link style={styles.linksStyle} to="/login">
+            Login
+          </Link>
+          <Link style={styles.linksStyle} to="/signup">
+            Signup
+          </Link>
+        </div>
+      );
     }
   }
   const styles = {
@@ -93,7 +89,9 @@ const Navbar = () => {
         <h3>Support The Obliteration of Pandemics</h3>
       </div>
       <div style={styles.linksContainerStyle}>
-        {showHome()}
+        <Link to={"/"} style={styles.linksStyle}>
+          Home
+        </Link>
         {showProfile()}
         {showNavigation()}
       </div>
