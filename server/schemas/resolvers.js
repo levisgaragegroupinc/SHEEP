@@ -58,7 +58,8 @@ const resolvers = {
 
       // upset here...
       for (let i = 0; i < product.length; i++) {
-        const productName = await stripe.product.create({
+        console.log("HI");
+        const productName = await stripe.products.create({
           name: product[i].name,
         });
 
@@ -76,6 +77,7 @@ const resolvers = {
 
       //only appears if I comment out the for loop
       console.log("The line items array is: ", line_items);
+
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
@@ -83,6 +85,8 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
       });
+
+      console.log(session.id);
 
       return { session: session.id };
     },
