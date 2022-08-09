@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
-// schema for the User's projects array in User.js
 const projectSchema = new Schema({
   name: {
     type: String,

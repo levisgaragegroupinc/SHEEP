@@ -21,8 +21,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set to total dollars donated from all user orders
-    dollarsDonated: Number,
     // set funded to be an array of data that adheres to the projectSchema
     projectsFunded: [
       {
@@ -62,7 +60,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 // Add a virtual that goes through the orders and sums the total amount donated
 userSchema
-  .virtual("allDollarsDonated", {
+  .virtual("dollarsDonated", {
     ref: "Order",
     localField: "product._id",
     foreignField: "product",
