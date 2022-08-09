@@ -54,7 +54,7 @@ db.once("open", async () => {
       name: "Antibiotics for Vancomycin Staphylococcus Aureus",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "fas fa-heart",
+      image: "fas fa-bacterium",
       product: [
         product[0]._id,
         product[1]._id,
@@ -70,7 +70,7 @@ db.once("open", async () => {
       name: "Optimizing E-coli for Insulin Production",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "fas fa-heart",
+      image: "fas fa-biohazard",
       product: [
         product[0]._id,
         product[1]._id,
@@ -86,7 +86,7 @@ db.once("open", async () => {
       name: "Use of Bacteriophages to Eliminate Pathogens",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
-      image: "fas fa-heart",
+      image: "fas fa-bacteria",
       product: [
         product[0]._id,
         product[1]._id,
