@@ -56,7 +56,7 @@ const resolvers = {
       const { product } = await order.populate("product");
       console.log("My product is: ", product);
 
-      //upset here...
+      // upset here...
       for (let i = 0; i < product.length; i++) {
         const productName = await stripe.product.create({
           name: product[i].name,
@@ -76,7 +76,6 @@ const resolvers = {
 
       //only appears if I comment out the for loop
       console.log("The line items array is: ", line_items);
-
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
