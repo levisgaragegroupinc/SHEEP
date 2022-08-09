@@ -69,7 +69,7 @@ db.once("open", async () => {
     {
       name: "Optimizing E-coli for Insulin Production",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Enim tortor at auctor urna nunc id cursus metus. Egestas integer eget aliquet nibh. Nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor aliquam. Pretium aenean pharetra magna ac. Velit sed ullamcorper morbi tincidunt ornare massa. Purus sit amet volutpat consequat. In cursus turpis massa tincidunt dui. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.",
       image: "https://i.ibb.co/BKjWfMC/Four.jpg",
       product: [
         product[0]._id,

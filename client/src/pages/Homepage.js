@@ -39,6 +39,7 @@ const Homepage = () => {
       alignItems: "center",
       margin: "1rem",
       border: ".1rem solid black",
+      borderRadius: ".3rem"
     },
     contributeContainerStyles: {
       width: "100%",
@@ -48,15 +49,18 @@ const Homepage = () => {
       alignItems: "center",
     },
     imageStyle: {
-      scale: 1.2,
+      marginTop: "1.2rem",
+      width: "35%",
+      height: "50%",
+      borderRadius: ".5rem"
     }
   };
   return (
     <div style={styles.mainContainerStyle}>
      {projects && projects.map((project) => (
           <div key={project._id} style={styles.projectStyle}>
-            <h3>{project.name}</h3>
-            <img src={project.image}/>
+            <h2>{project.name}</h2>
+            <img style= {styles.imageStyle} src={project.image}/>
             <div style={styles.contributeContainerStyles}></div>
             <p className="projectDescription">{project.description}</p>
             {viewProject(project)}
