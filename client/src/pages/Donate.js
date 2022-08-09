@@ -7,6 +7,11 @@ import { loadStripe } from "@stripe/stripe-js";
 import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 import { QUERY_CHECKOUT } from "../utils/queries";
 
+
+const stripePromise = loadStripe(
+  "pk_test_51LTrSVC8TMpvZpf0sedUXRS4PClo9Ep07xAHUs9jOdhaFLtPAudN632XcO7dTV07DEItOh8uzuYsCq5BSkFJ9h6D00VYZLSbfZ"
+);
+
 const Donate = () => {
   const styles = {
     mainContainerStyle: {
@@ -58,8 +63,7 @@ const Donate = () => {
           <p>How much would u like to contribute?</p>
           {project.product.map((project) => (
             <div key={project._id} style={styles.projectStyle}>
-              <p>{project.name}</p>
-              <p>{project.price}</p>
+              <button>{project.name} {project.price}</button>
             </div>
           ))}
           <div>
