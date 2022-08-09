@@ -4,9 +4,15 @@
   padding: 0;
 }
 
-/* div {
-  border: 1px solid black;
-} */
+.projectDescription {
+  margin: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
 
 @media screen and (max-width: 768px) {
   .card {

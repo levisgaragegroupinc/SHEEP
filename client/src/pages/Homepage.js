@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 import Auth from "../utils/auth";
 
+
 import { QUERY_All_PROJECTS } from '../utils/queries';
 
 const Homepage = () => {
@@ -30,8 +31,8 @@ const Homepage = () => {
       flexWrap: "wrap",
     },
     projectStyle: {
-      height: "30%",
-      width: "30%",
+      height: "40%",
+      width: "40%",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-around",
@@ -46,15 +47,18 @@ const Homepage = () => {
       justifyContent: "space-around",
       alignItems: "center",
     },
+    imageStyle: {
+      scale: 1.2,
+    }
   };
   return (
     <div style={styles.mainContainerStyle}>
      {projects && projects.map((project) => (
           <div key={project._id} style={styles.projectStyle}>
-            <p>{project.name}</p>
-            <p>{project.img}</p>
+            <h3>{project.name}</h3>
+            <img src={project.image}/>
             <div style={styles.contributeContainerStyles}></div>
-            <p>{project.description}</p>
+            <p className="projectDescription">{project.description}</p>
             {viewProject(project)}
           </div>
         ))}

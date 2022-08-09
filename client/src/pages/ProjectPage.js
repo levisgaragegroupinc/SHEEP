@@ -30,7 +30,7 @@ const SingleProject = () => {
   return (
     <div style={styles.mainContainerStyle}>
       <div>{project.name}</div>
-      <div>{project.image}</div>
+      <img src={project.image}/>
       <div>{project.description}</div>
       <div>
         < Link to={`/donate/${project._id}`}>Donate</Link>
