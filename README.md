@@ -10,7 +10,7 @@
 
 The last couple of years have heightened our understanding of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
 
-[STOP: Support The Obliteration of Pandemics Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
+[Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 
 ---
 
@@ -44,16 +44,16 @@ This is an MVC application built with the following technologies:
 
 ### Application Links
 
-- [STOP: Support The Obliteration of Pandemics Project Proposal](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
-- [STOP: Support The Obliteration of Pandemics Git Hub Repository](https://github.com/levisgaragegroupinc/SHEEP)
-- [STOP: Support The Obliteration of Pandemics Deployed Link](https://git.heroku.com/serene-dawn-83584.git)
-- [STOP: Support The Obliteration of Pandemics Presentation Slides](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
+- [Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
+- [Git Hub Repository STOP: Support The Obliteration of Pandemics](https://github.com/levisgaragegroupinc/SHEEP)
+- [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://git.heroku.com/serene-dawn-83584.git)
+- [Presentation Slides STOP: Support The Obliteration of Pandemics](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
 
 ---
 
 ## Usage
 
-1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Link](https://git.heroku.com/serene-dawn-83584.git)
+1. Go to the deplyed application: [STOP: Support The Obliteration of Pandemics Deployed Heroku Link](https://git.heroku.com/serene-dawn-83584.git)
 
 ### Log In or Sign up
 
