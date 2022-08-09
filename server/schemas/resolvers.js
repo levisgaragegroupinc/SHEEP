@@ -47,20 +47,25 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      console.log(args);
+      const order = new Order({ product: args.product });
       const line_items = [];
 
-      const { products } = await order.populate("products");
+      console.log("My Order is: ", order);
 
-      for (let i = 0; i < products.length; i++) {
-        const product = await stripe.products.create({
-          name: products[i].name,
-          description: products[i].description,
+      const { product } = await order.populate("product");
+      console.log("My product is: ", product);
+
+      // upset here...
+      for (let i = 0; i < product.length; i++) {
+        console.log("HI");
+        const productName = await stripe.products.create({
+          name: product[i].name,
         });
 
         const price = await stripe.prices.create({
-          product: product.id,
-          unit_amount: products[i].price * 100,
+          product: productName.id,
+          unit_amount: product[i].price * 100,
           currency: "usd",
         });
 
@@ -70,6 +75,9 @@ const resolvers = {
         });
       }
 
+      //only appears if I comment out the for loop
+      console.log("The line items array is: ", line_items);
+
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
@@ -77,6 +85,8 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
       });
+
+      console.log(session.id);
 
       return { session: session.id };
     },
