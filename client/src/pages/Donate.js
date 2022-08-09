@@ -45,13 +45,7 @@ const Donate = () => {
     return <div>Loading...</div>;
   }
 
-  // const { loadingProducts, dataProducts } = useQuery(QUERY_ALL_PRODUCTS);
-
-  // const products = dataProducts?.project || {};
-
-  // if (loadingProducts) {
-  //   return <div>Loading...</div>;
-  // }
+  console.log(project);
 
   return (
     <div>
@@ -62,7 +56,12 @@ const Donate = () => {
         </div>
         <div style={styles.donateContainerStyle}>
           <p>How much would u like to contribute?</p>
-          <div>render donation amounts</div>
+          {project.product.map((project) => (
+            <div key={project._id} style={styles.projectStyle}>
+              <p>{project.name}</p>
+              <p>{project.price}</p>
+            </div>
+          ))}
           <div>
             <button>Continue to payment</button>
           </div>
