@@ -1,9 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// import schema from Projects.js
-const projectSchema = require("./Project");
-
 const userSchema = new Schema(
   {
     firstName: {
@@ -24,8 +21,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set to total dollars donated from all user orders
-    dollarsDonated: Number,
     // set funded to be an array of data that adheres to the projectSchema
     projectsFunded: [
       {
@@ -65,7 +60,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 // Add a virtual that goes through the orders and sums the total amount donated
 userSchema
-  .virtual("allDollarsDonated", {
+  .virtual("dollarsDonated", {
     ref: "Order",
     localField: "product._id",
     foreignField: "product",
@@ -85,16 +80,6 @@ userSchema
     }
     return donation;
   });
-
-// populate virtual
-// userSchema.virtual("orders", {
-//   ref: "orders"
-// })
-
-// when we query a user, we'll also get another field called `projectsFunded` with the number of projecst the user has funded.
-// userSchema.virtual("projectsFunded").get(function () {
-//   return this.projectsFunded.length;
-// });
 
 const User = model("User", userSchema);
 

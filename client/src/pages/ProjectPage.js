@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
 
-const ProjectPage = () => {
+import { QUERY_SINGLE_PROJECT  } from '../utils/queries';
+
+const SingleProject = () => {
+
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -10,16 +15,28 @@ const ProjectPage = () => {
       alignItems: "center",
     },
   };
+
+  const { projectId } = useParams();
+
+  const { loading, data } = useQuery(QUERY_SINGLE_PROJECT, {
+    variables: { id: projectId},
+  } );
+
+  const project =data?.project || {};
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <div style={styles.mainContainerStyle}>
-      <div>Project Title</div>
-      <div>Project Image</div>
-      <div>Project Decription</div>
+      <div>{project.name}</div>
+      <div>{project.image}</div>
+      <div>{project.description}</div>
       <div>
-        <Link to="/Donate">Donate</Link>
+        < Link to={`/donate/${project._id}`}>Donate</Link>
       </div>
     </div>
   );
 };
 
-export default ProjectPage;
+export default SingleProject;

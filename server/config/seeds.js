@@ -39,7 +39,15 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "fa-solid fa-heart",
-      product: [product[0]._id],
+      product: [
+        product[0]._id,
+        product[1]._id,
+        product[2]._id,
+        product[3]._id,
+        product[4]._id,
+        product[5]._id,
+        product[6]._id,
+      ],
       category: categories[0]._id,
     },
     {
@@ -47,7 +55,15 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "fa-solid fa-heart",
-      product: [product[0]._id],
+      product: [
+        product[0]._id,
+        product[1]._id,
+        product[2]._id,
+        product[3]._id,
+        product[4]._id,
+        product[5]._id,
+        product[6]._id,
+      ],
       category: categories[0]._id,
     },
     {
@@ -55,7 +71,15 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "fa-solid fa-heart",
-      product: [product[0]._id],
+      product: [
+        product[0]._id,
+        product[1]._id,
+        product[2]._id,
+        product[3]._id,
+        product[4]._id,
+        product[5]._id,
+        product[6]._id,
+      ],
       category: categories[0]._id,
     },
     {
@@ -63,7 +87,15 @@ db.once("open", async () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit.",
       image: "fa-solid fa-heart",
-      product: [product[0]._id],
+      product: [
+        product[0]._id,
+        product[1]._id,
+        product[2]._id,
+        product[3]._id,
+        product[4]._id,
+        product[5]._id,
+        product[6]._id,
+      ],
       category: categories[0]._id,
     },
   ]);

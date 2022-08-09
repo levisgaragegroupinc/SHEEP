@@ -35,7 +35,6 @@ const typeDefs = gql`
     lastName: String!
     email: String!
     dollarsDonated: Float
-    allDollarsDonated: Float
     projectsFunded: [Project]
     orders: [Order]
   }
@@ -49,6 +48,7 @@ const typeDefs = gql`
     user: User
   }
   type Query {
+    projects: [Project]
     categories: [Category]
     category(_id: ID!): Category
     project(_id: ID!): Project

@@ -10,6 +10,9 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+    projects: async () => {
+      return await Project.find();
+    },
     // tested works
     category: async (parent, { _id }) => {
       return await (await Category.findOne({ _id })).populate("projects");

@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const Category = require("./Category");
-const Project = require("./Project");
 const { Schema } = mongoose;
 
 const orderSchema = new Schema(

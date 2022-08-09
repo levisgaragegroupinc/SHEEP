@@ -15,6 +15,17 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 
+export const QUERY_All_PROJECTS = gql`
+query Projects {
+  projects {
+    _id
+    name
+    description
+    image
+  }
+}
+`;
+
 export const QUERY_SINGLE_CATEGORY = gql`
   query Query($id: ID!) {
     category(_id: $id) {
@@ -31,7 +42,7 @@ export const QUERY_SINGLE_CATEGORY = gql`
 `;
 
 export const QUERY_SINGLE_PROJECT = gql`
-  query Query($id: ID!) {
+  query SingleProject($id: ID!) {
     project(_id: $id) {
       _id
       name
@@ -55,6 +66,8 @@ export const QUERY_SINGLE_PRODUCT = gql`
     }
   }
 `;
+
+
 
 export const QUERY_ALL_USERS = gql`
   query Query {
@@ -109,3 +122,6 @@ export const QUERY_CHECKOUT = gql`
     }
   }
 `;
+
+
+
