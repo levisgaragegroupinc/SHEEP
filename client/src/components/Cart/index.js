@@ -10,7 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
 
 const stripePromise = loadStripe(
-  "pk_test_51LTrSVC8TMpvZpf0sedUXRS4PClo9Ep07xAHUs9jOdhaFLtPAudN632XcO7dTV07DEItOh8uzuYsCq5BSkFJ9h6D00VYZLSbfZ"
+  "pk_test_51LUk67BmDPcsQPR8Uei5YbDU5RDDLYctfqI2q3IroOcoXo7SurRZi9ED1s7CZY2h4hak9SfVxhjEgDygTyOIkdPd00CYMi1bHt"
 );
 
 const Cart = () => {
