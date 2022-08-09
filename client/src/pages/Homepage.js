@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom";
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 
-import { QUERY_All_PROJECTS } from '../utils/queries';
+import { QUERY_All_PROJECTS } from "../utils/queries";
 
 const Homepage = () => {
-
   const { loading, data } = useQuery(QUERY_All_PROJECTS);
 
   const projects = data?.projects || [];
 
   function viewProject(project) {
     if (Auth.loggedIn()) {
-      return (
-        <Link to={`/projectPage/${project._id}`}>View Project</Link>
-      );
+      return <Link to={`/projectPage/${project._id}`}>View Project</Link>;
     } else {
-      return (
-        <Link to="/login">Login to View Project</Link>
-      )
+      return <Link to="/login">Login to View Project</Link>;
     }
   }
   const styles = {
@@ -49,7 +44,8 @@ const Homepage = () => {
   };
   return (
     <div style={styles.mainContainerStyle}>
-     {projects && projects.map((project) => (
+      {projects &&
+        projects.map((project) => (
           <div key={project._id} style={styles.projectStyle}>
             <p>{project.name}</p>
             <p>{project.img}</p>
