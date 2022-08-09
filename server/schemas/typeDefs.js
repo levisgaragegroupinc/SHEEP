@@ -55,7 +55,7 @@ const typeDefs = gql`
     product(_id: ID!): Product
     users: [User]
     user(_id: ID!): User
-    checkout(product: ID!): Checkout
+    checkout(product: [ID]!): Checkout
   }
   type Mutation {
     addUser(

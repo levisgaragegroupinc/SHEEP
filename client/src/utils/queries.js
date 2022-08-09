@@ -114,8 +114,8 @@ export const QUERY_SINGLE_USER = gql`
 `;
 
 export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
+  query Checkout($product: [ID]!) {
+    checkout(product: $product) {
       session
     }
   }
