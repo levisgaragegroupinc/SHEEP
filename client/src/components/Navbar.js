@@ -70,6 +70,7 @@ const Navbar = () => {
     },
     linksStyle: {
       margin: ".5rem",
+      color: "#082D0F",
     },
     loginStyle: {
       margin: ".5rem",
