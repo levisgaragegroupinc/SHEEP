@@ -19,7 +19,8 @@ import LoginForm from "./pages/LoginForm";
 import { StoreProvider } from "./utils/GlobalState";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  // uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
