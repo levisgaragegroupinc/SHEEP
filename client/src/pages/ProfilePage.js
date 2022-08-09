@@ -1,5 +1,21 @@
+import Auth from "../utils/auth";
+import { useQuery } from '@apollo/client';
+
+import { QUERY_SINGLE_USER } from '../utils/queries';
+
+
 
 const ProfilePage = () => {
+
+  const { loading, data } = useQuery(QUERY_SINGLE_USER, {
+    variables: { id: Auth.getProfile().data._id},
+  });
+
+  const user = data?.user || [];
+
+  console.log(user);
+
+
   const styles = {
     mainContainerStyle: {
       height: "80vh",
@@ -21,7 +37,7 @@ const ProfilePage = () => {
       marginLeft: ".8rem",
     },
     petriDishContainerStyle: {
-      height: "60%",
+      height: "70%",
       width: "100%",
       border: ".1rem solid black",
       marginTop: ".5rem",
@@ -30,13 +46,14 @@ const ProfilePage = () => {
       alignItems: "center",
     },
     personalInfoContainerStyle: {
-      height: "40%",
+      height: "30%",
       width: "100%",
       border: ".1rem solid black",
     },
     sectionTitleStyle: {
       textAlign: "center",
       textDecoration: "underline",
+      marginBottom: "1rem",
     },
     peronalItemContainerStyle: {
       display: "flex",
@@ -83,22 +100,20 @@ const ProfilePage = () => {
     },
   };
 
+
   return (
     <div style={styles.mainContainerStyle}>
       <div style={styles.infoContainerStyle}>
         <div style={styles.personalInfoContainerStyle}>
-          {/* to do get personal info from db create modal popup to channg info*/}
           <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
           <div style={styles.peronalItemContainerStyle}>
-            <p style={styles.personalInfoItemsStyle}>UserName:</p>
-            <button style={styles.updateButtonStyle}>update</button>
-          </div>
-          <div style={styles.peronalItemContainerStyle}>
             <p style={styles.personalInfoItemsStyle}>Email:</p>
+            <p>{Auth.getProfile().data.email}</p>
             <button style={styles.updateButtonStyle}>update</button>
           </div>
           <div style={styles.peronalItemContainerStyle}>
             <p style={styles.personalInfoItemsStyle}>Password:</p>
+            <p>************</p>
             <button style={styles.updateButtonStyle}>update</button>
           </div>
         </div>
@@ -122,8 +137,8 @@ const ProfilePage = () => {
         <table style={styles.tableStyles}>
           <tr style={styles.tableRowStyle}>
             <th style={styles.tableHeaderStyle}>Project</th>
-            <th  style={styles.tableHeaderStyle}>Amount</th>
-            <th  style={styles.tableHeaderStyle}>Date</th>
+            <th style={styles.tableHeaderStyle}>Amount</th>
+            <th style={styles.tableHeaderStyle}>Date</th>
           </tr>
           {/* to do map through and render transaction history as tr's */}
         </table>
