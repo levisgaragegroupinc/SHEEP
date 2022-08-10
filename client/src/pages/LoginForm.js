@@ -44,31 +44,31 @@ function Login(props) {
       flexDirection: "column",
       justifyContent: "space-around",
       alignItems: "center",
-      fontSize: "1.4rem",
-      borderRadius: ".5rem"
+      borderRadius: ".5rem",
     },
     formInputContainerStyle: {
       margin: "1.2rem",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      fontSize: "1.3rem"
+      fontSize: "1.3rem",
     },
     labelStyle: {
       marginRight: ".3rem",
-    }
+    },
   };
-  
 
   return (
     <div style={styles.mainContainerStyle}>
       <div style={styles.formContainerStyle}>
-        <h2>Login</h2>
+        <h1>Login</h1>
         <form onSubmit={handleFormSubmit} style={styles.formStyle}>
           <div style={styles.formInputContainerStyle}>
-            <label htmlFor="email" style={styles.labelStyle}>Email address:</label>
+            <label htmlFor="email" style={styles.labelStyle}>
+              Email address:
+            </label>
             <input
-              placeholder="youremail@test.com"
+              placeholder="mail@email.com"
               name="email"
               type="email"
               id="email"
@@ -76,7 +76,9 @@ function Login(props) {
             />
           </div>
           <div style={styles.formInputContainerStyle}>
-            <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
+            <label htmlFor="pwd" style={styles.labelStyle}>
+              Password:
+            </label>
             <input
               placeholder="******"
               name="password"
