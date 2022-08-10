@@ -40,6 +40,8 @@ const Navbar = () => {
       justifyContent: "space-between",
       alignItems: "center",
       borderBottom: ".2rem solid black",
+      fontFamily: "Tiro Gurmukhi, serif",
+      fontSize: "1.2rem"
     },
     imgContainerStyle: {
       height: "100%",
@@ -95,8 +97,6 @@ const Navbar = () => {
         {showProfile()}
         {showNavigation()}
       </div>
-      {/* temp sucesspage move to swipe success return link */}
-      <Link to={"/success"}>Temp SuccessPage</Link>
     </div>
   );
 };

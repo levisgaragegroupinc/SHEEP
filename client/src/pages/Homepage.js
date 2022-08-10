@@ -25,7 +25,7 @@ const Homepage = () => {
       flexWrap: "wrap",
     },
     projectStyle: {
-      height: "40%",
+      height: "45%",
       width: "40%",
       display: "flex",
       flexDirection: "column",
@@ -34,13 +34,6 @@ const Homepage = () => {
       margin: "1rem",
       border: ".1rem solid black",
       borderRadius: ".3rem"
-    },
-    contributeContainerStyles: {
-      width: "100%",
-      height: "10%",
-      display: "flex",
-      justifyContent: "space-around",
-      alignItems: "center",
     },
     imageStyle: {
       marginTop: "1.2rem",
@@ -56,7 +49,6 @@ const Homepage = () => {
           <div key={project._id} style={styles.projectStyle}>
             <h2>{project.name}</h2>
             <img style= {styles.imageStyle} src={project.image}/>
-            <div style={styles.contributeContainerStyles}></div>
             <p className="projectDescription">{project.description}</p>
             {viewProject(project)}
           </div>
