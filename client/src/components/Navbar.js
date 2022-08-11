@@ -1,6 +1,7 @@
 import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
+import "../styles/links.css";
 
 const Navbar = () => {
   function showProfile() {
@@ -41,7 +42,7 @@ const Navbar = () => {
       alignItems: "center",
       borderBottom: ".2rem solid black",
       fontFamily: "Tiro Gurmukhi, serif",
-      fontSize: "1.2rem"
+      fontSize: "1.2rem",
     },
     imgContainerStyle: {
       height: "100%",
@@ -72,6 +73,9 @@ const Navbar = () => {
     },
     linksStyle: {
       margin: ".5rem",
+      padding: "3px 9px",
+      borderRadius: "6px",
+      height: "30px",
     },
     loginStyle: {
       margin: ".5rem",
