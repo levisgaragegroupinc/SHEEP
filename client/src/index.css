@@ -2,14 +2,101 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* div {
-  border: 1px solid black;
-} */
+.projectDescription {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 
 @media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
+  .homepageBoxs {
+    width: 85% !important;
   }
+
+  .navMobile {
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 25vh !important;
+  }
+
+  .titleMobile {
+    display: none !important;
+  }
+  .titleDesMobile {
+    font-size: .8rem !important;
+  }
+  .navlinkMobile{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center!important;
+  }
+
+  .projectDescription {
+    -webkit-line-clamp: 2 !important;
+  }
+
+  .imgMobile {
+    height: 45% !important;
+    width: 40% !important;
+  }
+
+  .formMobile{
+    height: 75% !important;
+    width: 75% !important;
+  }
+
+  .inputMobile{
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .profileMobile{
+    flex-direction: column !important;
+    justify-content: center !important;
+
+  }
+
+  .infoMobile {
+    width: 100% !important;
+  }
+
+  .historyMobile {
+    width: 100% !important;
+    margin-top: 1.2rem !important;
+    margin-left: 0rem !important;
+  }
+
+  .singleDescription {
+    overflow-y:auto;
+  }
+  
+}
+
+@media screen and (max-width: 425px) {
+  .imgMobile {
+    height: 35% !important;
+    width: 60% !important;
+  }
+
+  .personalMobile{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+  }
+  
+  .historyMobile {
+    overflow-y:auto;
+  }
+
 }

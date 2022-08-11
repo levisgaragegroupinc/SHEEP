@@ -22,18 +22,30 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ORDER = gql`
-mutation Mutation($product: ID!, $project: ID!) {
-  addOrder(product: $product, project: $project) {
-    _id
-    purchaseDate
-    product {
+  mutation Mutation($product: [ID]!) {
+    addOrder(product: $product) {
       _id
-    }
-    project {
-      _id
+      purchaseDate
+      product {
+        _id
+      }
     }
   }
-}`;
+`;
+
+// export const ADD_ORDER = gql`
+// mutation Mutation($product: ID!, $project: ID!) {
+//   addOrder(product: $product, project: $project) {
+//     _id
+//     purchaseDate
+//     product {
+//       _id
+//     }
+//     project {
+//       _id
+//     }
+//   }
+// }`;
 
 export const UPDATE_USER = gql`
   mutation Mutation(

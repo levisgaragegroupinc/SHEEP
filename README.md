@@ -45,14 +45,14 @@ This is an MVC application built with the following technologies:
 
 - [Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 - [Git Hub Repository STOP: Support The Obliteration of Pandemics](https://github.com/levisgaragegroupinc/SHEEP)
-- [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://git.heroku.com/serene-dawn-83584.git)
+- [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://serene-dawn-83584.herokuapp.com/)
 - [Presentation Slides STOP: Support The Obliteration of Pandemics](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
 
 ---
 
 ## Usage
 
-1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://git.heroku.com/serene-dawn-83584.git)
+1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://serene-dawn-83584.herokuapp.com/)
 
 ### Log In or Sign up
 
@@ -74,6 +74,7 @@ In order to create this application, we used the skills we have at the moment. W
 
 - [Stripe payment platform](https://stripe.com/docs)
 - [The Net Ninja: Components & Templates](https://www.youtube.com/watch?v=9D1x7-2FmTA)
+- [Pixabay: PIRO4D](https://pixabay.com/illustrations/virus-pathogen-infection-biology-4937609/)
 - Trilogy Education Services, LLC for example code throughout the week 22 exercises.
 
 ### Questions

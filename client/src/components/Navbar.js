@@ -1,6 +1,8 @@
 import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
+import "../styles/links.css";
+import "../styles/headers.css";
 
 const Navbar = () => {
   function showProfile() {
@@ -40,6 +42,9 @@ const Navbar = () => {
       justifyContent: "space-between",
       alignItems: "center",
       borderBottom: ".2rem solid black",
+      fontFamily: "Tiro Gurmukhi, serif",
+      fontSize: "1.2rem",
+      textAlign: "center"
     },
     imgContainerStyle: {
       height: "100%",
@@ -51,7 +56,6 @@ const Navbar = () => {
       width: "10rem",
       height: "5rem",
       borderRadius: "10px",
-      margin: ".5rem",
     },
     titleContainerStyle: {
       height: "100%",
@@ -70,33 +74,40 @@ const Navbar = () => {
     },
     linksStyle: {
       margin: ".5rem",
+      padding: "3px 9px",
+      borderRadius: "6px",
+      fontSize: "16px",
+      textTransform: "uppercase",
+      fontWeight: "500",
     },
     loginStyle: {
       margin: ".5rem",
     },
+    header3: {
+      fontSize: "18px",
+      textAlign: "center",
+    },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      <div style={styles.imgContainerStyle}>
+    <div className="navMobile" style={styles.mainContainerStyle}>
+      <div className= "navlinkMobile" style={styles.imgContainerStyle}>
         <img
           style={styles.imgStyle}
           src={logo}
           alt="Virus Cell Molecule with STOP to the right"
         ></img>
       </div>
-      <div style={styles.titleContainerStyle}>
-        <h1>S.T.O.P.</h1>
-        <h3>Support The Obliteration of Pandemics</h3>
+      <div className= "navlinkMobile" style={styles.titleContainerStyle}>
+        <h1 className="titleMobile">S.T.O.P.</h1>
+        <h3 className="titleDesMobile">Support The Obliteration of Pandemics</h3>
       </div>
-      <div style={styles.linksContainerStyle}>
+      <div className= "navlinkMobile" style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>
           Home
         </Link>
         {showProfile()}
         {showNavigation()}
       </div>
-      {/* temp sucesspage move to swipe success return link */}
-      <Link to={"/success"}>Temp SuccessPage</Link>
     </div>
   );
 };
