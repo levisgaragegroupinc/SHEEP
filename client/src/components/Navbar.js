@@ -75,7 +75,9 @@ const Navbar = () => {
       margin: ".5rem",
       padding: "3px 9px",
       borderRadius: "6px",
-      height: "30px",
+      fontSize: "16px",
+      textTransform: "uppercase",
+      fontWeight: "500",
     },
     loginStyle: {
       margin: ".5rem",
