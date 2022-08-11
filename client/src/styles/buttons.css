@@ -5,12 +5,18 @@
     --grey-01: #A9A9A0;
     --grey-02: #96968c;
     --dark-01: #082D0F;
-    --dark-02: #0f4e1a;
+    --dark-02: #429786;
 }
 
 button {
 background-color: var(--dark-02);
 color: #fff;
+margin: .5rem;
+padding: 3px 9px;
+border-radius: 6px;
+font-size: 16px;
+text-transform: uppercase;
+font-weight: 400;
 }
 
 button:hover {
