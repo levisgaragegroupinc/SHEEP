@@ -4,6 +4,7 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
 import "../styles/buttons.css";
+import background from '../assets/virus-gab3ed1248_1920.jpg'
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -58,7 +59,7 @@ function Signup(props) {
     },
     labelStyle: {
       marginRight: ".3rem",
-          },
+    },
     inputStyle: {
       borderRadius: ".5rem",
       height: "30px",
@@ -67,56 +68,58 @@ function Signup(props) {
   };
 
   return (
-    <div style={styles.mainContainerStyle}>
-      <div style={styles.formContainerStyle}>
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      <div style={styles.mainContainerStyle}>
+        <div style={styles.formContainerStyle}>
 
-        <h1>Signup</h1>
-        <form onSubmit={handleFormSubmit}>
-          <div style={styles.formInputContainerStyle}>
-            <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
-            <input style={styles.inputStyle}
-              placeholder="First"
-              name="firstName"
-              type="firstName"
-              id="firstName"
-              onChange={handleChange}
-            />
-          </div>
-          <div style={styles.formInputContainerStyle}>
-            <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
-            <input style={styles.inputStyle}
-              placeholder="Last"
-              name="lastName"
-              type="lastName"
-              id="lastName"
-              onChange={handleChange}
-            />
-          </div>
-          <div style={styles.formInputContainerStyle}>
-            <label htmlFor="email" style={styles.labelStyle}>Email:</label>
-            <input style={styles.inputStyle}
-              placeholder="mail@email.com"
-              name="email"
-              type="email"
-              id="email"
-              onChange={handleChange}
-            />
-          </div>
-          <div style={styles.formInputContainerStyle}>
-            <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
-            <input style={styles.inputStyle}
-              placeholder="******"
-              name="password"
-              type="password"
-              id="pwd"
-              onChange={handleChange}
-            />
-          </div>
-          <div style={styles.formInputContainerStyle}>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-        <Link to="/login">Already have an account? Login here!</Link>
+          <h1>Signup</h1>
+          <form onSubmit={handleFormSubmit}>
+            <div style={styles.formInputContainerStyle}>
+              <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
+              <input style={styles.inputStyle}
+                placeholder="First"
+                name="firstName"
+                type="firstName"
+                id="firstName"
+                onChange={handleChange}
+              />
+            </div>
+            <div style={styles.formInputContainerStyle}>
+              <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
+              <input style={styles.inputStyle}
+                placeholder="Last"
+                name="lastName"
+                type="lastName"
+                id="lastName"
+                onChange={handleChange}
+              />
+            </div>
+            <div style={styles.formInputContainerStyle}>
+              <label htmlFor="email" style={styles.labelStyle}>Email:</label>
+              <input style={styles.inputStyle}
+                placeholder="mail@email.com"
+                name="email"
+                type="email"
+                id="email"
+                onChange={handleChange}
+              />
+            </div>
+            <div style={styles.formInputContainerStyle}>
+              <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
+              <input style={styles.inputStyle}
+                placeholder="******"
+                name="password"
+                type="password"
+                id="pwd"
+                onChange={handleChange}
+              />
+            </div>
+            <div style={styles.formInputContainerStyle}>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <Link to="/login">Already have an account? Login here!</Link>
+        </div>
       </div>
     </div>
   );

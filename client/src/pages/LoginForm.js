@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import "../styles/buttons.css";
+import background from '../assets/virus-gab3ed1248_1920.jpg'
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -66,6 +67,7 @@ function Login(props) {
   };
 
   return (
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
     <div style={styles.mainContainerStyle}>
       <div style={styles.formContainerStyle}>
         <h1>Login</h1>
@@ -105,6 +107,7 @@ function Login(props) {
         </form>
         <Link to="/signup">Don't have any account yet? Signup here!</Link>
       </div>
+    </div>
     </div>
   );
 }
