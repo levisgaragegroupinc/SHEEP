@@ -69,10 +69,10 @@ function Login(props) {
   return (
     <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
     <div style={styles.mainContainerStyle}>
-      <div style={styles.formContainerStyle}>
+      <div className="formMobile" style={styles.formContainerStyle}>
         <h1>Login</h1>
         <form onSubmit={handleFormSubmit} style={styles.formStyle}>
-          <div style={styles.formInputContainerStyle}>
+          <div className= "inputMobile" style={styles.formInputContainerStyle}>
             <label htmlFor="email" style={styles.labelStyle}>
               Email address:
             </label>
@@ -84,7 +84,7 @@ function Login(props) {
               onChange={handleChange}
             />
           </div>
-          <div style={styles.formInputContainerStyle}>
+          <div className= "inputMobile" style={styles.formInputContainerStyle}>
             <label htmlFor="pwd" style={styles.labelStyle}>
               Password:
             </label>

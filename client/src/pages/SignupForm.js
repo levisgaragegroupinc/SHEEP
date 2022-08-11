@@ -70,11 +70,11 @@ function Signup(props) {
   return (
     <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
       <div style={styles.mainContainerStyle}>
-        <div style={styles.formContainerStyle}>
+        <div className="formMobile" style={styles.formContainerStyle}>
 
           <h1>Signup</h1>
           <form onSubmit={handleFormSubmit}>
-            <div style={styles.formInputContainerStyle}>
+            <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
               <input style={styles.inputStyle}
                 placeholder="First"
@@ -84,7 +84,7 @@ function Signup(props) {
                 onChange={handleChange}
               />
             </div>
-            <div style={styles.formInputContainerStyle}>
+            <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
               <input style={styles.inputStyle}
                 placeholder="Last"
@@ -94,7 +94,7 @@ function Signup(props) {
                 onChange={handleChange}
               />
             </div>
-            <div style={styles.formInputContainerStyle}>
+            <div  className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="email" style={styles.labelStyle}>Email:</label>
               <input style={styles.inputStyle}
                 placeholder="mail@email.com"
@@ -104,7 +104,7 @@ function Signup(props) {
                 onChange={handleChange}
               />
             </div>
-            <div style={styles.formInputContainerStyle}>
+            <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
               <input style={styles.inputStyle}
                 placeholder="******"

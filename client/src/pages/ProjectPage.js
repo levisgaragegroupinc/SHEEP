@@ -14,6 +14,14 @@ const SingleProject = () => {
       flexDirection: "column",
       justifyContent: "space-around",
       alignItems: "center",
+      textAlign: "center"
+    },
+    imgStyle: {
+      width: "20%",
+    },
+    descriptionStyle: {
+      width: "50%",
+      height: "35%"
     },
     descriptionStyle: {
       fontSize: "20px",
@@ -42,9 +50,11 @@ const SingleProject = () => {
   return (
     <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
     <div style={styles.mainContainerStyle}>
-      <div style={styles.nameStyle}>{project.name}</div>
-      <img src={project.image} />
-      <div style={styles.descriptionStyle}>{project.description}</div>
+      <div>
+        <h1>{project.name}</h1>
+      </div>
+      <img className="imgMobile" style={styles.imgStyle} src={project.image} />
+      <p className="singleDescription" style={styles.descriptionStyle}>{project.description}</p>
       <div>
         <Link to={`/donate/${project._id}`}>Donate</Link>
       </div>

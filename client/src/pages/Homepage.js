@@ -31,6 +31,7 @@ const Homepage = () => {
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
+      textAlign: "center"
     },
     projectStyle: {
       height: "65%",
@@ -70,12 +71,10 @@ const Homepage = () => {
     <div style={styles.mainContainerStyle}>
       {projects &&
         projects.map((project) => (
-          <div key={project._id} style={styles.projectStyle}>
-            <h2 style={styles.header2}>{project.name}</h2>
-            <img style={styles.imageStyle} src={project.image} />
-            <p style={styles.paragraph} className="projectDescription">
-              {project.description}
-            </p>
+          <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
+            <h2>{project.name}</h2>
+            <img className="imgMobile" style= {styles.imageStyle} src={project.image}/>
+            <p className="projectDescription">{project.description}</p>
             {viewProject(project)}
           </div>
         ))}

@@ -13,14 +13,15 @@ import ProfilePage from "./pages/ProfilePage";
 import Homepage from "./pages/Homepage";
 import ProjectPage from "./pages/ProjectPage";
 import DonatePage from "./pages/Donate";
-import SuccessPage from "./pages/SuccessPage";
+// import SuccessPage from "./pages/SuccessPage";
 import SignupForm from "./pages/SignupForm";
 import LoginForm from "./pages/LoginForm";
 import { StoreProvider } from "./utils/GlobalState";
+import Success from "./pages/Success";
 
 const httpLink = createHttpLink({
-  // uri: "http://localhost:3001/graphql",
-  uri: "/graphql",
+  uri: "http://localhost:3001/graphql",
+  // uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -50,7 +51,7 @@ function App() {
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/projectPage/:projectId" element={<ProjectPage />} />
               <Route path="/donate/:projectId" element={<DonatePage />} />
-              <Route path="/success" element={<SuccessPage />} />
+              <Route path="/success" element={<Success />} />
               <Route path="/signup" element={<SignupForm />} />
               <Route path="/login" element={<LoginForm />} />
             </Routes>
