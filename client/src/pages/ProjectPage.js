@@ -21,6 +21,15 @@ const SingleProject = () => {
       width: "50%",
       height: "35%"
     },
+    descriptionStyle: {
+      fontSize: "20px",
+      margin: "80px",
+    },
+    nameStyle: {
+      fontSize: "30px",
+      fontWeight: "bolder",
+      margin: "50px",
+    },
   };
 
   const { projectId } = useParams();
