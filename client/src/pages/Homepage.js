@@ -11,7 +11,11 @@ const Homepage = () => {
 
   function viewProject(project) {
     if (Auth.loggedIn()) {
-      return <Link to={`/projectPage/${project._id}`}>View Project</Link>;
+      return (
+        <Link style={styles.linkStyle} to={`/projectPage/${project._id}`}>
+          View Project
+        </Link>
+      );
     } else {
       return <Link to="/login">Login to View Project</Link>;
     }
@@ -34,14 +38,28 @@ const Homepage = () => {
       alignItems: "center",
       margin: "1rem",
       border: ".1rem solid black",
-      borderRadius: ".3rem"
+      borderRadius: ".3rem",
     },
     imageStyle: {
       marginTop: "1.2rem",
       width: "35%",
       height: "50%",
-      borderRadius: ".5rem"
-    }
+      borderRadius: ".5rem",
+    },
+    linkStyle: {
+      margin: ".5rem",
+      padding: "3px 9px",
+      borderRadius: "6px",
+      fontSize: "16px",
+      textTransform: "uppercase",
+      fontWeight: "400",
+    },
+    header2: {
+      padding: "12px",
+    },
+    paragraph: {
+      padding: "12px",
+    },
   };
   return (
     <div style={styles.mainContainerStyle}>

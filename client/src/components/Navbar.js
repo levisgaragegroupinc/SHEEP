@@ -2,6 +2,7 @@ import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import "../styles/links.css";
+import "../styles/headers.css";
 
 const Navbar = () => {
   function showProfile() {
@@ -55,7 +56,6 @@ const Navbar = () => {
       width: "10rem",
       height: "5rem",
       borderRadius: "10px",
-      margin: ".5rem",
     },
     titleContainerStyle: {
       height: "100%",
@@ -82,6 +82,10 @@ const Navbar = () => {
     },
     loginStyle: {
       margin: ".5rem",
+    },
+    header3: {
+      fontSize: "18px",
+      textAlign: "center",
     },
   };
   return (

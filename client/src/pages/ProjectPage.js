@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { useQuery } from '@apollo/client';
-import { useParams } from 'react-router-dom';
+import { useQuery } from "@apollo/client";
+import { useParams } from "react-router-dom";
 
-import { QUERY_SINGLE_PROJECT  } from '../utils/queries';
+import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 
 const SingleProject = () => {
-
   const styles = {
     mainContainerStyle: {
       height: "85vh",
@@ -24,10 +23,10 @@ const SingleProject = () => {
   const { projectId } = useParams();
 
   const { loading, data } = useQuery(QUERY_SINGLE_PROJECT, {
-    variables: { id: projectId},
-  } );
+    variables: { id: projectId },
+  });
 
-  const project =data?.project || {};
+  const project = data?.project || {};
 
   if (loading) {
     return <div>Loading...</div>;
@@ -38,7 +37,7 @@ const SingleProject = () => {
       <img style={styles.imgStyle}src={project.image}/>
       <div>{project.description}</div>
       <div>
-        < Link to={`/donate/${project._id}`}>Donate</Link>
+        <Link to={`/donate/${project._id}`}>Donate</Link>
       </div>
     </div>
   );
