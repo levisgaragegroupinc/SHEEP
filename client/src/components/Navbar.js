@@ -1,6 +1,8 @@
 import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
+import "../styles/links.css";
+import "../styles/headers.css";
 
 const Navbar = () => {
   function showProfile() {
@@ -41,7 +43,7 @@ const Navbar = () => {
       alignItems: "center",
       borderBottom: ".2rem solid black",
       fontFamily: "Tiro Gurmukhi, serif",
-      fontSize: "1.2rem"
+      fontSize: "1.2rem",
     },
     imgContainerStyle: {
       height: "100%",
@@ -53,7 +55,6 @@ const Navbar = () => {
       width: "10rem",
       height: "5rem",
       borderRadius: "10px",
-      margin: ".5rem",
     },
     titleContainerStyle: {
       height: "100%",
@@ -72,9 +73,18 @@ const Navbar = () => {
     },
     linksStyle: {
       margin: ".5rem",
+      padding: "3px 9px",
+      borderRadius: "6px",
+      fontSize: "16px",
+      textTransform: "uppercase",
+      fontWeight: "500",
     },
     loginStyle: {
       margin: ".5rem",
+    },
+    header3: {
+      fontSize: "18px",
+      textAlign: "center",
     },
   };
   return (
@@ -88,7 +98,7 @@ const Navbar = () => {
       </div>
       <div style={styles.titleContainerStyle}>
         <h1>S.T.O.P.</h1>
-        <h3>Support The Obliteration of Pandemics</h3>
+        <h3 style={styles.header3}>Support The Obliteration of Pandemics</h3>
       </div>
       <div style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>
