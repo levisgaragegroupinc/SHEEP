@@ -37,6 +37,7 @@ function Login(props) {
       alignItems: "center",
     },
     formContainerStyle: {
+      backgroundColor: "#E6E6FA",
       border: ".1rem solid black",
       height: "50%",
       width: "40%",
