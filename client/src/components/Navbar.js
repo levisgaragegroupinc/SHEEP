@@ -44,6 +44,7 @@ const Navbar = () => {
       borderBottom: ".2rem solid black",
       fontFamily: "Tiro Gurmukhi, serif",
       fontSize: "1.2rem",
+      textAlign: "center"
     },
     imgContainerStyle: {
       height: "100%",

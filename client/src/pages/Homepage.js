@@ -31,6 +31,7 @@ const Homepage = () => {
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
+      textAlign: "center"
     },
     projectStyle: {
       height: "65%",
