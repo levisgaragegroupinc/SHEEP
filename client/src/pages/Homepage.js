@@ -46,7 +46,7 @@ const Homepage = () => {
     <div style={styles.mainContainerStyle}>
       {projects &&
         projects.map((project) => (
-          <div key={project._id} style={styles.projectStyle}>
+          <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
             <h2>{project.name}</h2>
             <img style= {styles.imageStyle} src={project.image}/>
             <p className="projectDescription">{project.description}</p>

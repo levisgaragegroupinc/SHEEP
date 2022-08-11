@@ -14,6 +14,11 @@ const SingleProject = () => {
       justifyContent: "space-around",
       alignItems: "center",
     },
+    imgStyle: {
+      height: "30%",
+      width: "20%"
+    }
+
   };
 
   const { projectId } = useParams();
@@ -29,8 +34,8 @@ const SingleProject = () => {
   }
   return (
     <div style={styles.mainContainerStyle}>
-      <div>{project.name}</div>
-      <img src={project.image}/>
+      <div><h1>{project.name}</h1></div>
+      <img style={styles.imgStyle}src={project.image}/>
       <div>{project.description}</div>
       <div>
         < Link to={`/donate/${project._id}`}>Donate</Link>

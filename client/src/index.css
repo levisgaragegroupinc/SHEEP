@@ -4,7 +4,7 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .projectDescription {
@@ -13,14 +13,36 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
-          line-clamp: 2; 
+  -webkit-line-clamp: 3;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
-
 @media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
+  .homepageBoxs {
+    width: 85% !important;
   }
+
+  .navMobile {
+    flex-direction: column !important;
+    justify-content: center !important;
+    height: 25vh !important;
+  }
+
+  .titleMobile {
+    display: none !important;
+  }
+  .titleDesMobile {
+    font-size: .8rem !important;
+  }
+  .navlinkMobile{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center!important;
+  }
+
+  .projectDescription {
+    -webkit-line-clamp: 2 !important;
+  }
+  
 }

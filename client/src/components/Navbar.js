@@ -84,19 +84,19 @@ const Navbar = () => {
     },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      <div style={styles.imgContainerStyle}>
+    <div className="navMobile" style={styles.mainContainerStyle}>
+      <div className= "navlinkMobile" style={styles.imgContainerStyle}>
         <img
           style={styles.imgStyle}
           src={logo}
           alt="Virus Cell Molecule with STOP to the right"
         ></img>
       </div>
-      <div style={styles.titleContainerStyle}>
-        <h1>S.T.O.P.</h1>
-        <h3>Support The Obliteration of Pandemics</h3>
+      <div className= "navlinkMobile" style={styles.titleContainerStyle}>
+        <h1 className="titleMobile">S.T.O.P.</h1>
+        <h3 className="titleDesMobile">Support The Obliteration of Pandemics</h3>
       </div>
-      <div style={styles.linksContainerStyle}>
+      <div className= "navlinkMobile" style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>
           Home
         </Link>
