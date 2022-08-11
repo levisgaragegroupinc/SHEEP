@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
+import background from '../assets/virus-gab3ed1248_1920.jpg'
+
 
 import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 import { QUERY_CHECKOUT } from "../utils/queries";
@@ -54,9 +56,11 @@ const Donate = () => {
   console.log(project);
 
   return (
-    <div>
-      <ProductList />
-      <Cart />
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      <div>
+        <ProductList />
+        <Cart />
+      </div>
     </div>
   );
 };
