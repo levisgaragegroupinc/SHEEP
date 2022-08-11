@@ -20,8 +20,8 @@ import { StoreProvider } from "./utils/GlobalState";
 import Success from "./pages/Success";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
-  // uri: "/graphql",
+  // uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
