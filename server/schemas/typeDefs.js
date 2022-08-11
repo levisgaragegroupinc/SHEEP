@@ -25,7 +25,7 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
-    product: Product
+    product: [Product]
     project: Project
   }
 
