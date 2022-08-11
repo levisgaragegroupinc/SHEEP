@@ -17,7 +17,11 @@ const Homepage = () => {
         </Link>
       );
     } else {
-      return <Link to="/login">Login to View Project</Link>;
+      return (
+        <Link style={styles.linkStyle} to="/login">
+          Login to View Project
+        </Link>
+      );
     }
   }
   const styles = {
@@ -29,8 +33,9 @@ const Homepage = () => {
       flexWrap: "wrap",
     },
     projectStyle: {
-      height: "45%",
+      height: "65%",
       width: "40%",
+      minWidth: "300px",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-around",
@@ -42,7 +47,7 @@ const Homepage = () => {
     imageStyle: {
       marginTop: "1.2rem",
       width: "35%",
-      height: "50%",
+      height: "40%",
       borderRadius: ".5rem",
     },
     linkStyle: {
@@ -57,7 +62,8 @@ const Homepage = () => {
       padding: "12px",
     },
     paragraph: {
-      padding: "12px",
+      padding: "2px",
+      marginBottom: "2px",
     },
   };
   return (
