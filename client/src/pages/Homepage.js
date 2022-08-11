@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
+import background from '../assets/virus-gab3ed1248_1920.jpg'
 
 import { QUERY_All_PROJECTS } from "../utils/queries";
 
@@ -31,7 +32,7 @@ const Homepage = () => {
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
-      textAlign: "center"
+      textAlign: "center",
     },
     projectStyle: {
       height: "65%",
@@ -44,6 +45,7 @@ const Homepage = () => {
       margin: "1rem",
       border: ".1rem solid black",
       borderRadius: ".3rem",
+      backgroundColor: "#FFFFFF",
     },
     imageStyle: {
       marginTop: "1.2rem",
@@ -68,16 +70,18 @@ const Homepage = () => {
     },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      {projects &&
-        projects.map((project) => (
-          <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
-            <h2>{project.name}</h2>
-            <img className="imgMobile" style= {styles.imageStyle} src={project.image}/>
-            <p className="projectDescription">{project.description}</p>
-            {viewProject(project)}
-          </div>
-        ))}
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      <div style={styles.mainContainerStyle}>
+        {projects &&
+          projects.map((project) => (
+            <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
+              <h2>{project.name}</h2>
+              <img className="imgMobile" style={styles.imageStyle} src={project.image} />
+              <p className="projectDescription">{project.description}</p>
+              {viewProject(project)}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
