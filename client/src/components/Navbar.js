@@ -2,6 +2,7 @@ import logo from "../images/STOP-logos.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import "../styles/links.css";
+import "../styles/headers.css";
 
 const Navbar = () => {
   function showProfile() {
@@ -82,6 +83,10 @@ const Navbar = () => {
     loginStyle: {
       margin: ".5rem",
     },
+    header3: {
+      fontSize: "18px",
+      textAlign: "center",
+    },
   };
   return (
     <div style={styles.mainContainerStyle}>
@@ -94,7 +99,7 @@ const Navbar = () => {
       </div>
       <div style={styles.titleContainerStyle}>
         <h1>S.T.O.P.</h1>
-        <h3>Support The Obliteration of Pandemics</h3>
+        <h3 style={styles.header3}>Support The Obliteration of Pandemics</h3>
       </div>
       <div style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>
