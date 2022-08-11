@@ -1,20 +1,17 @@
 import Auth from "../utils/auth";
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
+import "../styles/buttons.css";
 
-import { QUERY_SINGLE_USER } from '../utils/queries';
-
-
+import { QUERY_SINGLE_USER } from "../utils/queries";
 
 const ProfilePage = () => {
-
   const { loading, data } = useQuery(QUERY_SINGLE_USER, {
-    variables: { id: Auth.getProfile().data._id},
+    variables: { id: Auth.getProfile().data._id },
   });
 
   const user = data?.user || [];
 
   console.log(user);
-
 
   const styles = {
     mainContainerStyle: {
@@ -69,6 +66,11 @@ const ProfilePage = () => {
     },
     updateButtonStyle: {
       margin: "1rem",
+      padding: "3px 9px",
+      borderRadius: "6px",
+      border: "1px ",
+      fontSize: "14px",
+      fontWeight: "400",
     },
     amoebaContainerStyle: {
       display: "flex",
@@ -100,7 +102,6 @@ const ProfilePage = () => {
     },
   };
 
-
   return (
     <div style={styles.mainContainerStyle}>
       <div style={styles.infoContainerStyle}>
@@ -127,7 +128,7 @@ const ProfilePage = () => {
           <div style={styles.redeemStyle}>
             {/* to do get ameoba count */}
             <p>Amoeba Count: 8</p>
-            <button>redeem</button>
+            <button style={styles.updateButtonStyle}>redeem</button>
             <p>*redeem 100 amoeba for a free plushie</p>
           </div>
         </div>
