@@ -1,27 +1,17 @@
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import "../styles/buttons.css";
+import background from "../assets/virus-gab3ed1248_1920.jpg";
 
 import { QUERY_SINGLE_USER } from "../utils/queries";
 
 const ProfilePage = () => {
-
-  // const { loading, data } = useQuery(QUERY_SINGLE_USER, {
-  //   variables: { id: Auth.getProfile().data._id },
-  // });
-
-  // console.log(data);
-
-  // const user = data?.user || [];
-
   const { data } = useQuery(QUERY_SINGLE_USER);
   let user;
 
   if (data) {
     user = data.user;
   }
-
-  console.log("I am", user);
 
   const styles = {
     mainContainerStyle: {
@@ -32,30 +22,38 @@ const ProfilePage = () => {
       margin: "1rem",
     },
     infoContainerStyle: {
-      height: "100%",
+      height: "80%",
       width: "50%",
       display: "flex",
       flexDirection: "column",
     },
     transactionContainerStyle: {
-      height: "100%",
+      height: "60%",
       width: "50%",
       border: ".1rem solid black",
       marginLeft: ".8rem",
+      backgroundColor: "white",
+      borderRadius: "75px",
     },
     petriDishContainerStyle: {
-      height: "70%",
+      height: "65%",
       width: "100%",
       border: ".1rem solid black",
       marginTop: ".5rem",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      borderRadius: "75px",
+      overflow: "auto",
+      backgroundColor: "white",
+      textAlign: "center",
     },
     personalInfoContainerStyle: {
       height: "30%",
       width: "100%",
       border: ".1rem solid black",
+      backgroundColor: "white",
+      borderRadius: "75px",
     },
     sectionTitleStyle: {
       textAlign: "center",
@@ -110,76 +108,171 @@ const ProfilePage = () => {
       justifyContent: "center",
       alignItems: "center",
     },
+    donationAmountStyle: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    donationNameContainer: {
+      display: "flex",
+      flexWrap: "wrap",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "20px",
+    },
+    donationNameStyles: {
+      width: "150px",
+      height: "150px",
+      borderRadius: "50%",
+      alignItems: "center",
+      textAlign: "center",
+      display: "flex",
+      justifyContent: "center",
+      border: "1px black solid",
+      backgroundColor: "var(--purple-02)",
+      color: "white",
+    },
   };
 
+  let sum = 0;
+  const handlePriceAddition = async () => {
+    let productArray = [];
+    let priceArray = [];
+
+    let orders = user.orders;
+
+    for (let i = 0; i < orders.length; i++) {
+      productArray.push(orders[i].product);
+    }
+
+    for (let i = 0; i < productArray.length; i++) {
+      for (let j = 0; j < productArray[i].length; j++) {
+        priceArray.push(productArray[i][j].price);
+      }
+    }
+
+    for (let i = 0; i < priceArray.length; i++) {
+      sum += priceArray[i];
+    }
+
+    return sum;
+  };
+
+  let amoeba = 0;
+  if (data) {
+    handlePriceAddition();
+    amoeba = sum / 10;
+  }
+
+  let friend = 0;
+  let supporter = 0;
+  let champion = 0;
+  let advocate = 0;
+  let ally = 0;
+  let defender = 0;
+  let benefactor = 0;
+
+  const handleNameQuantity = async () => {
+    let productArray = [];
+    let nameArray = [];
+
+    let orders = user.orders;
+
+    for (let i = 0; i < orders.length; i++) {
+      productArray.push(orders[i].product);
+    }
+
+    for (let i = 0; i < productArray.length; i++) {
+      for (let j = 0; j < productArray[i].length; j++) {
+        nameArray.push(productArray[i][j].name);
+      }
+    }
+
+    console.log(nameArray);
+
+    if (nameArray.includes("Friend")) {
+      friend += 1;
+    }
+    if (nameArray.includes("Champion")) {
+      champion += 1;
+    }
+    if (nameArray.includes("Supporter")) {
+      supporter += 1;
+    }
+    if (nameArray.includes("Advocate")) {
+      advocate += 1;
+    }
+    if (nameArray.includes("Ally")) {
+      ally += 1;
+    }
+    if (nameArray.includes("Defender")) {
+      defender += 1;
+    }
+    if (nameArray.includes("Benefactor")) {
+      benefactor += 1;
+    }
+
+    return friend, champion, supporter, ally, benefactor, defender, advocate;
+  };
+
+  if (data) {
+    handleNameQuantity();
+  }
+
   return (
-    <div className="profileMobile" style={styles.mainContainerStyle}>
-      <div className="infoMobile" style={styles.infoContainerStyle}>
-        <div className="personalMobile" style={styles.personalInfoContainerStyle}>
-          <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
-          <div style={styles.peronalItemContainerStyle}>
-            <p style={styles.personalInfoItemsStyle}>Email:</p>
-            <p>{Auth.getProfile().data.email}</p>
-            <button style={styles.updateButtonStyle}>update</button>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div style={styles.mainContainerStyle}>
+        <div style={styles.infoContainerStyle}>
+          <div style={styles.personalInfoContainerStyle}>
+            <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
+            <div style={styles.peronalItemContainerStyle}>
+              <p style={styles.personalInfoItemsStyle}>Email:</p>
+              <p>{Auth.getProfile().data.email}</p>
+              <button style={styles.updateButtonStyle}>update</button>
+            </div>
+            <div style={styles.peronalItemContainerStyle}>
+              <p style={styles.personalInfoItemsStyle}>Password:</p>
+              <p>************</p>
+              <button style={styles.updateButtonStyle}>update</button>
+            </div>
           </div>
-          <div style={styles.peronalItemContainerStyle}>
-            <p style={styles.personalInfoItemsStyle}>Password:</p>
-            <p>************</p>
-            <button style={styles.updateButtonStyle}>update</button>
+          <div style={styles.petriDishContainerStyle}>
+            <h1 style={styles.sectionTitleStyle}>Petri Dish</h1>
+            <div style={styles.amoebaContainerStyle}>
+              <p>{Array(amoeba).fill("🦠")}</p>
+            </div>
+            <div style={styles.redeemStyle}>
+              <p>Amoeba Count: {amoeba}</p>
+              <button style={styles.updateButtonStyle}>redeem</button>
+              <p>*redeem 100 amoeba for a free plushie</p>
+              <p>*Earn 1 amoeba for every $10 donated!</p>
+            </div>
           </div>
         </div>
-        <div style={styles.petriDishContainerStyle}>
-          <h1 style={styles.sectionTitleStyle}>Petri Dish</h1>
-          <div style={styles.amoebaContainerStyle}>
-            {/* to do render number of aemoba and return emoji */}
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
-            &#x1F9A0;&#x1F9A0;&#x1F9A0;&#x1F9A0;
+        <div style={styles.transactionContainerStyle}>
+          <h1 style={styles.sectionTitleStyle}>Donation Milestones!</h1>
+          <div style={styles.donationNameContainer}>
+            <p style={styles.donationNameStyles}>Friend: {friend}</p>
+            <p style={styles.donationNameStyles}>Supporter: {supporter}</p>
+            <p style={styles.donationNameStyles}>Champion: {champion}</p>
+            <p style={styles.donationNameStyles}>Advocate: {advocate}</p>
+            <p style={styles.donationNameStyles}>Ally: {ally}</p>
+            <p style={styles.donationNameStyles}>Defender: {defender}</p>
+            <p style={styles.donationNameStyles}>Benefactor: {benefactor}</p>
           </div>
-          <div style={styles.redeemStyle}>
-            {/* to do get ameoba count */}
-            <p>Amoeba Count: 8</p>
-            <button style={styles.updateButtonStyle}>redeem</button>
-            <p>*redeem 100 amoeba for a free plushie</p>
-          </div>
+          {user ? (
+            <div style={styles.donationAmountStyle}>
+              <h2>Total Amount Donated: ${sum}</h2>
+            </div>
+          ) : null}
         </div>
-      </div>
-      <div className="historyMobile" style={styles.transactionContainerStyle}>
-        <h1 style={styles.sectionTitleStyle}>Transaction History</h1>
-        <table style={styles.tableStyles}>
-          <tr style={styles.tableRowStyle}>
-            <th style={styles.tableHeaderStyle}>Type</th>
-            {user ? (
-              <>
-                {user.orders.map((order) => (
-                  <td key={order._id}>{order.product.name}</td>
-                ))}
-              </>
-            ) : null}
-            <th style={styles.tableHeaderStyle}>Amount</th>
-            {user ? (
-              <>
-                {user.orders.map((order) => (
-                  <td key={order._id}>{order.product.price}</td>
-                ))}
-              </>
-            ) : null}
-            <th style={styles.tableHeaderStyle}>Date</th>
-            <tr>
-              {user ? (
-                <>
-                  {user.orders.map((order) => (
-                    <td key={order._id}>
-                      {" "}
-                      {new Date(
-                        parseInt(order.purchaseDate)
-                      ).toLocaleDateString()}
-                    </td>
-                  ))}
-                </>
-              ) : null}
-            </tr>
-          </tr>
-        </table>
       </div>
     </div>
   );
