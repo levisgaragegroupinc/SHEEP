@@ -17,7 +17,11 @@ const Homepage = () => {
         </Link>
       );
     } else {
-      return <Link to="/login">Login to View Project</Link>;
+      return (
+        <Link style={styles.linkStyle} to="/login">
+          Login to View Project
+        </Link>
+      );
     }
   }
   const styles = {
@@ -43,7 +47,7 @@ const Homepage = () => {
     imageStyle: {
       marginTop: "1.2rem",
       width: "35%",
-      height: "50%",
+      height: "40%",
       borderRadius: ".5rem",
     },
     linkStyle: {
