@@ -85,28 +85,46 @@ export const QUERY_ALL_USERS = gql`
   }
 `;
 
+// export const QUERY_SINGLE_USER = gql`
+//   query Query($id: ID!) {
+//     user(_id: $id) {
+//       _id
+//       firstName
+//       lastName
+//       email
+//       dollarsDonated
+//       projectsFunded {
+//         _id
+//         name
+//         description
+//         image
+//       }
+//       orders {
+//         _id
+//         purchaseDate
+//         project {
+//           _id
+//           name
+//           description
+//           image
+//         }
+//       }
+//     }
+//   }
+// `;
+
 export const QUERY_SINGLE_USER = gql`
-  query Query($id: ID!) {
-    user(_id: $id) {
-      _id
+  {
+    user {
       firstName
       lastName
-      email
-      dollarsDonated
-      projectsFunded {
-        _id
-        name
-        description
-        image
-      }
       orders {
         _id
         purchaseDate
-        project {
+        product {
           _id
           name
-          description
-          image
+          price
         }
       }
     }
