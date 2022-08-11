@@ -13,6 +13,15 @@ const SingleProject = () => {
       justifyContent: "space-around",
       alignItems: "center",
     },
+    descriptionStyle: {
+      fontSize: "20px",
+      margin: "80px",
+    },
+    nameStyle: {
+      fontSize: "30px",
+      fontWeight: "bolder",
+      margin: "50px",
+    },
   };
 
   const { projectId } = useParams();
@@ -28,9 +37,9 @@ const SingleProject = () => {
   }
   return (
     <div style={styles.mainContainerStyle}>
-      <div>{project.name}</div>
+      <div style={styles.nameStyle}>{project.name}</div>
       <img src={project.image} />
-      <div>{project.description}</div>
+      <div style={styles.descriptionStyle}>{project.description}</div>
       <div>
         <Link to={`/donate/${project._id}`}>Donate</Link>
       </div>
