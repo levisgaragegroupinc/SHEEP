@@ -55,7 +55,6 @@ const Navbar = () => {
       width: "10rem",
       height: "5rem",
       borderRadius: "10px",
-      margin: ".5rem",
     },
     titleContainerStyle: {
       height: "100%",
