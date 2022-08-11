@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
+import { LOGIN } from "../utils/mutations";
+import Auth from "../utils/auth";
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
@@ -33,51 +33,73 @@ function Login(props) {
     mainContainerStyle: {
       height: "85vh",
       display: "flex",
-      flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      flexWrap: "wrap",
     },
-  }
+    formContainerStyle: {
+      border: ".1rem solid black",
+      height: "50%",
+      width: "40%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      alignItems: "center",
+      borderRadius: ".5rem",
+    },
+    formInputContainerStyle: {
+      margin: "1.2rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "1.3rem",
+    },
+    labelStyle: {
+      marginRight: ".3rem",
+    },
+  };
 
   return (
     <div style={styles.mainContainerStyle}>
-      
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p>The provided credentials are incorrect</p>
+      <div style={styles.formContainerStyle}>
+        <h1>Login</h1>
+        <form onSubmit={handleFormSubmit} style={styles.formStyle}>
+          <div style={styles.formInputContainerStyle}>
+            <label htmlFor="email" style={styles.labelStyle}>
+              Email address:
+            </label>
+            <input
+              placeholder="mail@email.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      <Link to="/signup">Don't have any acount yet? Signup here!</Link>
+          <div style={styles.formInputContainerStyle}>
+            <label htmlFor="pwd" style={styles.labelStyle}>
+              Password:
+            </label>
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div style={styles.formInputContainerStyle}>
+              <p>The provided credentials are incorrect</p>
+            </div>
+          ) : null}
+          <div style={styles.formInputContainerStyle}>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <Link to="/signup">Don't have any account yet? Signup here!</Link>
+      </div>
     </div>
   );
 }
 
 export default Login;
-

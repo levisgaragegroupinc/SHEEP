@@ -30,14 +30,43 @@ function Signup(props) {
     });
   };
 
-  return (
-    <div className="container my-1">
-      <Link to="/login">← Go to Login</Link>
+  const styles = {
+    mainContainerStyle: {
+      height: "85vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    formContainerStyle: {
+      border: ".1rem solid black",
+      height: "50%",
+      width: "40%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      alignItems: "center",
+      borderRadius: ".5rem",
+    },
+    formInputContainerStyle: {
+      margin: "1.2rem",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: "1.3rem",
+    },
+    labelStyle: {
+      marginRight: ".3rem",
+    },
+  };
 
-      <h2>Signup</h2>
+  return (
+    <div style={styles.mainContainerStyle}>
+      <div style={styles.formContainerStyle}>
+
+      <h1>Signup</h1>
       <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
+        <div style={styles.formInputContainerStyle}>
+          <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
           <input
             placeholder="First"
             name="firstName"
@@ -46,8 +75,8 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
+        <div style={styles.formInputContainerStyle}>
+          <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
           <input
             placeholder="Last"
             name="lastName"
@@ -56,18 +85,18 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+        <div style={styles.formInputContainerStyle}>
+          <label htmlFor="email" style={styles.labelStyle}>Email:</label>
           <input
-            placeholder="youremail@test.com"
+            placeholder="mail@email.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+        <div style={styles.formInputContainerStyle}>
+          <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
           <input
             placeholder="******"
             name="password"
@@ -76,10 +105,12 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
+        <div style={styles.formInputContainerStyle}>
           <button type="submit">Submit</button>
         </div>
       </form>
+      <Link to="/login">Already have an account? Login here!</Link>
+      </div>
     </div>
   );
 }
