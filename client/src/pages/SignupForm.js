@@ -58,14 +58,11 @@ function Signup(props) {
     },
     labelStyle: {
       marginRight: ".3rem",
-    },
-    btnStyle: {
-      margin: ".5rem",
-      padding: "3px 9px",
-      borderRadius: "6px",
-      fontSize: "16px",
-      textTransform: "uppercase",
-      fontWeight: "500",
+          },
+    inputStyle: {
+      borderRadius: ".5rem",
+      height: "30px",
+      fontSize: "20px",
     },
   };
 
@@ -77,7 +74,7 @@ function Signup(props) {
         <form onSubmit={handleFormSubmit}>
           <div style={styles.formInputContainerStyle}>
             <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="First"
               name="firstName"
               type="firstName"
@@ -87,7 +84,7 @@ function Signup(props) {
           </div>
           <div style={styles.formInputContainerStyle}>
             <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="Last"
               name="lastName"
               type="lastName"
@@ -97,7 +94,7 @@ function Signup(props) {
           </div>
           <div style={styles.formInputContainerStyle}>
             <label htmlFor="email" style={styles.labelStyle}>Email:</label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="mail@email.com"
               name="email"
               type="email"
@@ -107,7 +104,7 @@ function Signup(props) {
           </div>
           <div style={styles.formInputContainerStyle}>
             <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="******"
               name="password"
               type="password"

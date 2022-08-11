@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
+import "../styles/buttons.css";
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -57,6 +58,11 @@ function Login(props) {
     labelStyle: {
       marginRight: ".3rem",
     },
+    inputStyle: {
+      borderRadius: ".5rem",
+      height: "30px",
+      fontSize: "20px",
+    },
   };
 
   return (
@@ -68,7 +74,7 @@ function Login(props) {
             <label htmlFor="email" style={styles.labelStyle}>
               Email address:
             </label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="mail@email.com"
               name="email"
               type="email"
@@ -80,7 +86,7 @@ function Login(props) {
             <label htmlFor="pwd" style={styles.labelStyle}>
               Password:
             </label>
-            <input
+            <input style={styles.inputStyle}
               placeholder="******"
               name="password"
               type="password"
