@@ -31,17 +31,16 @@ const resolvers = {
     },
     //tested works
     user: async (parent, { _id }, context) => {
-      // return await (await User.findOne({ _id })).populate("orders");
-      // for the login stuff - above is just to confirm it works
       if (context.user) {
-        // const user = await User.findOne(context.user._id).populate("orders");
         const user = await User.findOne({
           _id: context.user._id,
         }).populate({
-          path: "orders",
-          populate: { path: "product" },
+          path: "orders.product",
+          // populate: { path: "product" },
         });
         console.log("User is", user);
+        console.log(user.orders[0]);
+
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
         return user;
       }
