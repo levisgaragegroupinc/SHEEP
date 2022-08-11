@@ -12,12 +12,15 @@ const SingleProject = () => {
       flexDirection: "column",
       justifyContent: "space-around",
       alignItems: "center",
+      textAlign: "center"
     },
     imgStyle: {
-      height: "30%",
-      width: "20%"
-    }
-
+      width: "20%",
+    },
+    descriptionStyle: {
+      width: "50%",
+      height: "35%"
+    },
   };
 
   const { projectId } = useParams();
@@ -33,9 +36,11 @@ const SingleProject = () => {
   }
   return (
     <div style={styles.mainContainerStyle}>
-      <div><h1>{project.name}</h1></div>
-      <img style={styles.imgStyle}src={project.image}/>
-      <div>{project.description}</div>
+      <div>
+        <h1>{project.name}</h1>
+      </div>
+      <img className="imgMobile" style={styles.imgStyle} src={project.image} />
+      <p className="singleDescription" style={styles.descriptionStyle}>{project.description}</p>
       <div>
         <Link to={`/donate/${project._id}`}>Donate</Link>
       </div>

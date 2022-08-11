@@ -105,7 +105,7 @@ const ProfilePage = () => {
   return (
     <div className="profileMobile" style={styles.mainContainerStyle}>
       <div className="infoMobile" style={styles.infoContainerStyle}>
-        <div style={styles.personalInfoContainerStyle}>
+        <div className="personalMobile" style={styles.personalInfoContainerStyle}>
           <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
           <div style={styles.peronalItemContainerStyle}>
             <p style={styles.personalInfoItemsStyle}>Email:</p>

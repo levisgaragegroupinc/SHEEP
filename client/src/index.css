@@ -47,7 +47,7 @@
 
   .imgMobile {
     height: 45% !important;
-    width: 35% !important;
+    width: 40% !important;
   }
 
   .formMobile{
@@ -75,13 +75,28 @@
     margin-top: 1.2rem !important;
     margin-left: 0rem !important;
   }
+
+  .singleDescription {
+    overflow-y:auto;
+  }
   
 }
 
 @media screen and (max-width: 425px) {
   .imgMobile {
     height: 35% !important;
-    width: 35% !important;
+    width: 60% !important;
+  }
+
+  .personalMobile{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+  }
+  
+  .historyMobile {
+    overflow-y:auto;
   }
 
 }
