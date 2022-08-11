@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
 import "../styles/buttons.css";
-import background from '../assets/virus-gab3ed1248_1920.jpg'
+import background from '../assets/covid-ga72cbfbc9_1920.jpg'
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
