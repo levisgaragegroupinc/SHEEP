@@ -35,10 +35,13 @@ const resolvers = {
       // for the login stuff - above is just to confirm it works
       if (context.user) {
         // const user = await User.findOne(context.user._id).populate("orders");
-        const user = await User.findOne({ _id: context.user._id }).populate({
+        const user = await User.findOne({
+          _id: context.user._id,
+        }).populate({
           path: "orders",
           populate: { path: "product" },
         });
+        console.log("User is", user);
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
         return user;
       }
@@ -47,18 +50,12 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      console.log(args);
       const order = new Order({ product: args.product });
       const line_items = [];
 
-      console.log("My Order is: ", order);
-
       const { product } = await order.populate("product");
-      console.log("My product is: ", product);
 
-      // upset here...
       for (let i = 0; i < product.length; i++) {
-        console.log("HI");
         const productName = await stripe.products.create({
           name: product[i].name,
         });
@@ -75,9 +72,6 @@ const resolvers = {
         });
       }
 
-      //only appears if I comment out the for loop
-      console.log("The line items array is: ", line_items);
-
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
@@ -85,8 +79,6 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
       });
-
-      console.log(session.id);
 
       return { session: session.id };
     },
@@ -100,21 +92,42 @@ const resolvers = {
       return { token, user };
     },
 
-    //tested works
-    addOrder: async (parent, { product, project }, context) => {
+    addOrder: async (parent, { product }, context) => {
       if (context.user) {
-        const order = new Order({ product, project });
-        console.log(order);
+        const order = new Order({ product });
+        //order save
+        order.save();
+        console.log("My new order:", order);
 
-        await User.findOneAndUpdate(context.user._id, {
-          $push: { orders: order._id },
-        });
+        console.log("My context id", context.user._id);
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $push: { orders: order },
+          }
+        );
 
         return order;
       }
 
       throw new AuthenticationError("Not logged in");
     },
+
+    // addOrder: async (parent, { product, project }, context) => {
+    //   if (context.user) {
+    //     const order = new Order({ product, project });
+    //     console.log(order);
+
+    //     await User.findOneAndUpdate(context.user._id, {
+    //       $push: { orders: order._id },
+    //     });
+
+    //     return order;
+    //   }
+
+    //   throw new AuthenticationError("Not logged in");
+    // },
     //tested works
     updateUser: async (parent, args, context) => {
       if (context.user) {

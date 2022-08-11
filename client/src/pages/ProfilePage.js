@@ -1,20 +1,25 @@
 import Auth from "../utils/auth";
-import { useQuery } from '@apollo/client';
+import { useQuery } from "@apollo/client";
 
-import { QUERY_SINGLE_USER } from '../utils/queries';
-
-
+import { QUERY_SINGLE_USER } from "../utils/queries";
 
 const ProfilePage = () => {
+  // const { loading, data } = useQuery(QUERY_SINGLE_USER, {
+  //   variables: { id: Auth.getProfile().data._id },
+  // });
 
-  const { loading, data } = useQuery(QUERY_SINGLE_USER, {
-    variables: { id: Auth.getProfile().data._id},
-  });
+  // console.log(data);
 
-  const user = data?.user || [];
+  // const user = data?.user || [];
 
-  console.log(user);
+  const { data } = useQuery(QUERY_SINGLE_USER);
+  let user;
 
+  if (data) {
+    user = data.user;
+  }
+
+  console.log("I am", user);
 
   const styles = {
     mainContainerStyle: {
@@ -100,7 +105,6 @@ const ProfilePage = () => {
     },
   };
 
-
   return (
     <div style={styles.mainContainerStyle}>
       <div style={styles.infoContainerStyle}>
@@ -136,11 +140,38 @@ const ProfilePage = () => {
         <h1 style={styles.sectionTitleStyle}>Transaction History</h1>
         <table style={styles.tableStyles}>
           <tr style={styles.tableRowStyle}>
-            <th style={styles.tableHeaderStyle}>Project</th>
+            <th style={styles.tableHeaderStyle}>Type</th>
+            {user ? (
+              <>
+                {user.orders.map((order) => (
+                  <td key={order._id}>{order.product.name}</td>
+                ))}
+              </>
+            ) : null}
             <th style={styles.tableHeaderStyle}>Amount</th>
+            {user ? (
+              <>
+                {user.orders.map((order) => (
+                  <td key={order._id}>{order.product.price}</td>
+                ))}
+              </>
+            ) : null}
             <th style={styles.tableHeaderStyle}>Date</th>
+            <tr>
+              {user ? (
+                <>
+                  {user.orders.map((order) => (
+                    <td key={order._id}>
+                      {" "}
+                      {new Date(
+                        parseInt(order.purchaseDate)
+                      ).toLocaleDateString()}
+                    </td>
+                  ))}
+                </>
+              ) : null}
+            </tr>
           </tr>
-          {/* to do map through and render transaction history as tr's */}
         </table>
       </div>
     </div>
