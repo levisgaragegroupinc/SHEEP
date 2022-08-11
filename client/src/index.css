@@ -44,5 +44,44 @@
   .projectDescription {
     -webkit-line-clamp: 2 !important;
   }
+
+  .imgMobile {
+    height: 45% !important;
+    width: 35% !important;
+  }
+
+  .formMobile{
+    height: 75% !important;
+    width: 75% !important;
+  }
+
+  .inputMobile{
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .profileMobile{
+    flex-direction: column !important;
+    justify-content: center !important;
+
+  }
+
+  .infoMobile {
+    width: 100% !important;
+  }
+
+  .historyMobile {
+    width: 100% !important;
+    margin-top: 1.2rem !important;
+    margin-left: 0rem !important;
+  }
   
+}
+
+@media screen and (max-width: 425px) {
+  .imgMobile {
+    height: 35% !important;
+    width: 35% !important;
+  }
+
 }

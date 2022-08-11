@@ -67,7 +67,7 @@ const Homepage = () => {
         projects.map((project) => (
           <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
             <h2>{project.name}</h2>
-            <img style= {styles.imageStyle} src={project.image}/>
+            <img className="imgMobile" style= {styles.imageStyle} src={project.image}/>
             <p className="projectDescription">{project.description}</p>
             {viewProject(project)}
           </div>
