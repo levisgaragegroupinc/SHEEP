@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .projectDescription {
@@ -14,6 +16,7 @@
           line-clamp: 2; 
   -webkit-box-orient: vertical;
 }
+
 
 @media screen and (max-width: 768px) {
   .card {
