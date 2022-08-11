@@ -43,6 +43,7 @@ const Homepage = () => {
       margin: "1rem",
       border: ".1rem solid black",
       borderRadius: ".3rem",
+      backgroundColor: "#E6E6FA",
     },
     imageStyle: {
       marginTop: "1.2rem",
