@@ -77,7 +77,7 @@ function Login(props) {
                 Email address:
               </label>
               <input style={styles.inputStyle}
-                placeholder="mail@email.com"
+                placeholder=" mail@email.com"
                 name="email"
                 type="email"
                 id="email"
@@ -89,7 +89,7 @@ function Login(props) {
                 Password:
               </label>
               <input style={styles.inputStyle}
-                placeholder="******"
+                placeholder=" ******"
                 name="password"
                 type="password"
                 id="pwd"

@@ -27,7 +27,6 @@
     flex-direction: column !important;
     justify-content: center !important;
     height: 25vh !important;
-    animation: x 13s linear infinite alternate;
   }
 
   .titleMobile {
@@ -41,12 +40,13 @@
     justify-content: center !important;
     align-items: center !important;
   }
-  
+
   .projectDescription {
     -webkit-line-clamp: 2 !important;
   }
 
   .imgMobile {
+    margin-top: 5px;
     height: 45% !important;
     width: 40% !important;
   }
@@ -79,7 +79,13 @@
   .singleDescription {
     overflow-y: auto;
   }
+  .projectTitleMobile {
+    margin: 0px !important;
+    background-color: none !important;
+  }
 }
+
+
 
 @media screen and (max-width: 425px) {
   .imgMobile {

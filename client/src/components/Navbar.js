@@ -100,10 +100,6 @@ const Navbar = () => {
           src={logo}
           alt="Virus Cell Molecule with STOP to the right"
         ></img>
-        <img src={virusOne} className="navVirus"></img>
-        <img src={virusTwo}></img>
-        <img src={virusThree}></img>
-        <img src={virusFour}></img>
       </div>
       <div className= "navlinkMobile" style={styles.titleContainerStyle}>
         <h1 className="titleMobile">S.T.O.P.</h1>
@@ -116,6 +112,10 @@ const Navbar = () => {
         {showProfile()}
         {showNavigation()}
       </div>
+      {/* <img src={virusOne} className="navVirus"></img>  */}
+        {/* <img src={virusTwo}></img>
+        <img src={virusThree}></img>
+        <img src={virusFour}></img> */}
     </div>
   );
 };

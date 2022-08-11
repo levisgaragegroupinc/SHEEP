@@ -83,7 +83,7 @@ db.once("open", async () => {
       category: categories[0]._id,
     },
     {
-      name: "Stem Cell Usage to Regrow Diseased Heart Tissue",
+      name: "Stem Cell Usage to Regrow Heart Tissue",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Auctor augue mauris augue neque. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Nullam eget felis eget nunc. Malesuada proin libero nunc consequat interdum. Enim tortor at auctor urna nunc id cursus metus. Egestas integer eget aliquet nibh. Nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor aliquam. Pretium aenean pharetra magna ac. Velit sed ullamcorper morbi tincidunt ornare massa. Purus sit amet volutpat consequat. In cursus turpis massa tincidunt dui. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.",
       image: "https://i.ibb.co/wRxzn6n/Eleven.jpg",
