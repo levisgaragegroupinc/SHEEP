@@ -1,0 +1,18 @@
+:root {
+    --purple-01: #4F3559;
+    --purple-02: #585191;
+    --yellow-01: #f7E003;
+    --grey-01: #A9A9A0;
+    --grey-02: #96968c;
+    --dark-01: #082D0F;
+}
+
+a {
+    background-color: var(--purple-02);
+    color: var(--yellow-01);
+
+}
+
+a:hover {
+    background-color: var(--purple-01);
+}
