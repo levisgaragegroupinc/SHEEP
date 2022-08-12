@@ -6,8 +6,25 @@ import { useQuery } from "@apollo/client";
 import { QUERY_SINGLE_PROJECT } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import { useParams } from "react-router-dom";
+import { slotFlagsText } from "@vue/shared";
 
 function ProductList() {
+  const styles = {
+    donateContainerStyle: {
+      height: "100%",
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+
+    donationOption: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  };
+
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
@@ -49,10 +66,10 @@ function ProductList() {
   }
 
   return (
-    <div className="my-2">
+    <div style={styles.donateContainerStyle}>
       <h2>Donation Options:</h2>
       {state.products.length ? (
-        <div className="flex-row">
+        <div style={styles.donationOption}>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

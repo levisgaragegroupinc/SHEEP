@@ -6,8 +6,7 @@ import { useParams } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
-import background from '../assets/virus-gab3ed1248_1920.jpg'
-
+import background from "../assets/virus-gab3ed1248_1920.jpg";
 
 import { QUERY_SINGLE_PROJECT } from "../utils/queries";
 import { QUERY_CHECKOUT } from "../utils/queries";
@@ -19,26 +18,11 @@ const stripePromise = loadStripe(
 const Donate = () => {
   const styles = {
     mainContainerStyle: {
-      height: "85vh",
+      height: "80vh",
       display: "flex",
-      justifyContent: "space-around",
+      justifyContent: "center",
       alignItems: "center",
-    },
-    projectContainerStyle: {
-      height: "100%",
-      width: "50%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-around",
-      alignItems: "center",
-    },
-    donateContainerStyle: {
-      height: "100%",
-      width: "50%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-around",
-      alignItems: "center",
+      margin: "1rem",
     },
   };
 
@@ -56,8 +40,14 @@ const Donate = () => {
   console.log(project);
 
   return (
-    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-      <div>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div style={styles.mainContainerStyle}>
         <ProductList />
         <Cart />
       </div>
