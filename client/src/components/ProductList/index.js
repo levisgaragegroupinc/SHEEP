@@ -11,17 +11,26 @@ import { slotFlagsText } from "@vue/shared";
 function ProductList() {
   const styles = {
     donateContainerStyle: {
-      height: "100%",
-      width: "100%",
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      flexWrap: "wrap",
+      backgroundColor: "rgb(169,169,159, 0.8)",
+      width: "auto",
+      height: "auto",
+      borderRadius: "2rem",
+      padding: "1rem"
     },
+    nameStyle: {
+      fontSize: "2rem",
+      fontWeight: "bolder",
+      padding: ".5rem",
+      margin: ".5em 4em 1em",
+      backgroundColor: "#429786",
+      borderStyle: "double",
+      borderRadius: ".5rem",
 
-    donationOption: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
     },
   };
 
@@ -67,7 +76,7 @@ function ProductList() {
 
   return (
     <div style={styles.donateContainerStyle}>
-      <h2>Donation Options:</h2>
+      <h2 style={styles.nameStyle}>Donation Options:</h2>
       {state.products.length ? (
         <div style={styles.donationOption}>
           {filterProducts().map((product) => (

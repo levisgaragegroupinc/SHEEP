@@ -18,11 +18,10 @@ const stripePromise = loadStripe(
 const Donate = () => {
   const styles = {
     mainContainerStyle: {
-      height: "80vh",
+      height: "85vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      margin: "1rem",
     },
   };
 
@@ -40,7 +39,7 @@ const Donate = () => {
   console.log(project);
 
   return (
-    <div
+    <div 
       style={{
         backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
