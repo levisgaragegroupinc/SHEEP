@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../utils/mutations";
 import { idbPromise } from "../utils/helpers";
+import background from "../assets/virus-gab3ed1248_1920.jpg";
+import { Link } from "react-router-dom";
 
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
@@ -40,13 +42,26 @@ function Success() {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      color: "white",
     },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      <h1>Thank You for you donation!</h1>
-      <p>ameobas earned (link to profile)</p>
-      <p>link to home page</p>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div style={styles.mainContainerStyle}>
+        <h1>Thank You for you donation!</h1>
+        <h4>
+          See your updated ameobas! - <Link to="/profile">My Profile</Link>
+        </h4>
+        <h4>
+          <Link to="/">Go Back Home</Link>
+        </h4>
+      </div>
     </div>
   );
 }

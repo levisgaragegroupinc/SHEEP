@@ -121,18 +121,6 @@ const ProfilePage = () => {
       justifyContent: "center",
       padding: "20px",
     },
-    donationNameStyles: {
-      width: "150px",
-      height: "150px",
-      borderRadius: "50%",
-      alignItems: "center",
-      textAlign: "center",
-      display: "flex",
-      justifyContent: "center",
-      border: "1px black solid",
-      backgroundColor: "var(--purple-02)",
-      color: "white",
-    },
   };
 
   let sum = 0;
@@ -188,8 +176,6 @@ const ProfilePage = () => {
         nameArray.push(productArray[i][j].name);
       }
     }
-
-    console.log(nameArray);
 
     if (nameArray.includes("Friend")) {
       friend += 1;
@@ -259,13 +245,125 @@ const ProfilePage = () => {
         <div style={styles.transactionContainerStyle}>
           <h1 style={styles.sectionTitleStyle}>Donation Milestones!</h1>
           <div style={styles.donationNameContainer}>
-            <p style={styles.donationNameStyles}>Friend: {friend}</p>
-            <p style={styles.donationNameStyles}>Supporter: {supporter}</p>
-            <p style={styles.donationNameStyles}>Champion: {champion}</p>
-            <p style={styles.donationNameStyles}>Advocate: {advocate}</p>
-            <p style={styles.donationNameStyles}>Ally: {ally}</p>
-            <p style={styles.donationNameStyles}>Defender: {defender}</p>
-            <p style={styles.donationNameStyles}>Benefactor: {benefactor}</p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(friend == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Friend!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(supporter == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Supporter!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(champion == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Champion!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(advocate == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Advocate!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(ally == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Ally!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(defender == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Defender!
+            </p>
+            <p
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                alignItems: "center",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                border: "1px black solid",
+                ...(benefactor == 1
+                  ? { backgroundColor: "var(--dark-02)" }
+                  : { backgroundColor: "white", opacity: "50%" }),
+              }}
+            >
+              Benefactor!
+            </p>
           </div>
           {user ? (
             <div style={styles.donationAmountStyle}>
