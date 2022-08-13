@@ -18,18 +18,14 @@ function Success() {
         const { data } = await addOrder({
           variables: { product: products },
         });
-        // console.log(data);
-        // const productData = data.addOrder.product;
-        // console.log("My product data:", productData);
+        console.log(data);
+        const productData = data.addOrder.product;
+        console.log("My product data:", productData);
 
-        // products.forEach((item) => {
-        //   idbPromise("cart", "delete", item);
-        // });
+        productData.forEach((item) => {
+          idbPromise("cart", "delete", item);
+        });
       }
-
-      //   setTimeout(() => {
-      //     window.location.assign("/");
-      //   }, 3000);
     }
 
     saveOrder();
