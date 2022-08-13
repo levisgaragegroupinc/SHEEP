@@ -1,12 +1,8 @@
-import logo from "../images/STOP-logos.png";
+import logo from "../images/logo.png";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import "../styles/links.css";
 import "../styles/headers.css";
-import virusOne from "../assets/virusOne.png"
-import virusTwo from "../assets/virusTwo.png"
-import virusThree from "../assets/virusThree.png"
-import virusFour from "../assets/virusFour.png"
 
 const Navbar = () => {
   function showProfile() {
@@ -48,7 +44,8 @@ const Navbar = () => {
       borderBottom: ".2rem solid black",
       fontFamily: "Tiro Gurmukhi, serif",
       fontSize: "1.2rem",
-      textAlign: "center"
+      textAlign: "center",
+      backgroundColor: "#a9a99f"
     },
     imgContainerStyle: {
       height: "100%",
@@ -57,7 +54,7 @@ const Navbar = () => {
       alignItems: "center",
     },
     imgStyle: {
-      width: "10rem",
+      width: "16rem",
       height: "5rem",
       borderRadius: "10px",
     },
@@ -68,6 +65,7 @@ const Navbar = () => {
       justifyContent: "center",
       alignItems: "center",
       width: "33%",
+      color: "#f7e109"
     },
     linksContainerStyle: {
       height: "100%",
@@ -95,14 +93,13 @@ const Navbar = () => {
   return (
     <div className="navMobile" style={styles.mainContainerStyle}>
       <div className= "navlinkMobile" style={styles.imgContainerStyle}>
-        <img
+      </div>
+      <div className= "navlinkMobile" style={styles.titleContainerStyle}>
+      <img
           style={styles.imgStyle}
           src={logo}
           alt="Virus Cell Molecule with STOP to the right"
         ></img>
-      </div>
-      <div className= "navlinkMobile" style={styles.titleContainerStyle}>
-        <h1 className="titleMobile">S.T.O.P.</h1>
         <h3 className="titleDesMobile">Support The Obliteration of Pandemics</h3>
       </div>
       <div className= "navlinkMobile" style={styles.linksContainerStyle}>

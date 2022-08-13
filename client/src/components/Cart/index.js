@@ -8,6 +8,7 @@ import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
+import virusOne from "../../assets/virusOne.png";
 
 const stripePromise = loadStripe(
   "pk_test_51LUk67BmDPcsQPR8Uei5YbDU5RDDLYctfqI2q3IroOcoXo7SurRZi9ED1s7CZY2h4hak9SfVxhjEgDygTyOIkdPd00CYMi1bHt"
@@ -68,7 +69,7 @@ const Cart = () => {
     return (
       <div className="cart-closed" onClick={toggleCart}>
         <span role="img" aria-label="trash">
-         🔬
+          🔬
         </span>
       </div>
     );
@@ -79,7 +80,11 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         [close]
       </div>
-      <h2>Cart</h2>
+      <img className="virus" src={virusOne}></img>
+      <img className="virus" src={virusOne}></img>
+      <img className="virus" src={virusOne}></img>
+      <img className="virus" src={virusOne}></img>
+      <h2 style = {{textDecoration: "underline"}}>Cart</h2>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -87,10 +92,12 @@ const Cart = () => {
           ))}
 
           <div className="flex-row space-between">
+        
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Donate</button>
+              
             ) : (
               <span>(log in to donate)</span>
             )}

@@ -16,7 +16,7 @@ const SingleProject = () => {
       textAlign: "center",
     },
     projectConatiner: {
-      backgroundColor: "rgb(169,169,159, 0.8)",
+      backgroundColor: "rgb(169,169,159, 0.9)",
       width: "70%",
       height: "70%",
       borderRadius: "2rem",

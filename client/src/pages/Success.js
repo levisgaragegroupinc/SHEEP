@@ -53,13 +53,13 @@ function Success() {
       }}
     >
       <div style={styles.mainContainerStyle}>
-        <h1>Thank You for you donation!</h1>
+        <h1>Thank you for your donation!</h1>
         <h4>
-          See your updated ameobas! - <Link to="/profile">My Profile</Link>
+          See your updated ameobas!
         </h4>
-        <h4>
+        <Link to="/profile">My Profile</Link>
+        <h4>Or</h4>
           <Link to="/">Go Back Home</Link>
-        </h4>
       </div>
     </div>
   );

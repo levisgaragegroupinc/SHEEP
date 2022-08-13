@@ -97,9 +97,15 @@
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+    border-radius: 20px !important;
   }
 
   .historyMobile {
     overflow-y: auto;
+  }
+  .donateMobile {
+    overflow-y: auto;
+    
+
   }
 }
