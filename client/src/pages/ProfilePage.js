@@ -34,6 +34,7 @@ const ProfilePage = () => {
       backgroundColor: "white",
       borderRadius: "75px",
       overflow: "auto",
+      backgroundColor: "rgb(169,169,159, 0.9)"
     },
     petriDishContainerStyle: {
       height: "65%",
@@ -47,6 +48,7 @@ const ProfilePage = () => {
       overflow: "auto",
       backgroundColor: "white",
       textAlign: "center",
+      backgroundColor: "rgb(169,169,159, 0.9)"
     },
     personalInfoContainerStyle: {
       height: "30%",
@@ -54,6 +56,7 @@ const ProfilePage = () => {
       border: ".1rem solid black",
       backgroundColor: "white",
       borderRadius: "75px",
+      backgroundColor: "rgb(169,169,159, 0.9)"
     },
     sectionTitleStyle: {
       textAlign: "center",
@@ -91,6 +94,7 @@ const ProfilePage = () => {
       height: "90%",
       width: "100%",
       marginTop: "1rem",
+      
     },
     tableRowStyle: {
       display: "flex",

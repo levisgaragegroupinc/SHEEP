@@ -15,7 +15,7 @@ function ProductList() {
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
-      backgroundColor: "rgb(169,169,159, 0.8)",
+      backgroundColor: "rgb(169,169,159, 0.9)",
       width: "auto",
       height: "auto",
       borderRadius: "2rem",
@@ -74,7 +74,7 @@ function ProductList() {
 
   return (
     <div style={styles.donateContainerStyle}>
-      <h2 style={styles.nameStyle}>Donation Options:</h2>
+      <h2 className="donateMobile"style={styles.nameStyle}>Donation Options:</h2>
       {state.products.length ? (
         <div style={styles.donationOption}>
           {filterProducts().map((product) => (

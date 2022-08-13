@@ -46,7 +46,7 @@ const Homepage = () => {
       border: ".1rem solid black",
       borderRadius: ".3rem",
       backgroundColor: "#FFFFFF",
-      backgroundColor: "rgb(169,169,159, 0.85)"
+      backgroundColor: "rgb(169,169,159, 0.9)"
     },
     imageStyle: {
       marginTop: "1.2rem",
