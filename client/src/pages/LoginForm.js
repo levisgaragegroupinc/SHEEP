@@ -68,46 +68,46 @@ function Login(props) {
 
   return (
     <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
-    <div style={styles.mainContainerStyle}>
-      <div className="formMobile" style={styles.formContainerStyle}>
-        <h1>Login</h1>
-        <form onSubmit={handleFormSubmit} style={styles.formStyle}>
-          <div className= "inputMobile" style={styles.formInputContainerStyle}>
-            <label htmlFor="email" style={styles.labelStyle}>
-              Email address:
-            </label>
-            <input style={styles.inputStyle}
-              placeholder="mail@email.com"
-              name="email"
-              type="email"
-              id="email"
-              onChange={handleChange}
-            />
-          </div>
-          <div className= "inputMobile" style={styles.formInputContainerStyle}>
-            <label htmlFor="pwd" style={styles.labelStyle}>
-              Password:
-            </label>
-            <input style={styles.inputStyle}
-              placeholder="******"
-              name="password"
-              type="password"
-              id="pwd"
-              onChange={handleChange}
-            />
-          </div>
-          {error ? (
-            <div style={styles.formInputContainerStyle}>
-              <p>The provided credentials are incorrect</p>
+      <div style={styles.mainContainerStyle}>
+        <div className="formMobile" style={styles.formContainerStyle}>
+          <h1>Login</h1>
+          <form onSubmit={handleFormSubmit} style={styles.formStyle}>
+            <div className="inputMobile" style={styles.formInputContainerStyle}>
+              <label htmlFor="email" style={styles.labelStyle}>
+                Email address:
+              </label>
+              <input style={styles.inputStyle}
+                placeholder=" mail@email.com"
+                name="email"
+                type="email"
+                id="email"
+                onChange={handleChange}
+              />
             </div>
-          ) : null}
-          <div style={styles.formInputContainerStyle}>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-        <Link to="/signup">Don't have any account yet? Signup here!</Link>
+            <div className="inputMobile" style={styles.formInputContainerStyle}>
+              <label htmlFor="pwd" style={styles.labelStyle}>
+                Password:
+              </label>
+              <input style={styles.inputStyle}
+                placeholder=" ******"
+                name="password"
+                type="password"
+                id="pwd"
+                onChange={handleChange}
+              />
+            </div>
+            {error ? (
+              <div style={styles.formInputContainerStyle}>
+                <p>The provided credentials are incorrect</p>
+              </div>
+            ) : null}
+            <div style={styles.formInputContainerStyle}>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <Link to="/signup">Don't have any account yet? Signup here!</Link>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

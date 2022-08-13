@@ -214,11 +214,11 @@ const ProfilePage = () => {
         backgroundSize: "cover",
       }}
     >
-      <div style={styles.mainContainerStyle}>
-        <div style={styles.infoContainerStyle}>
-          <div style={styles.personalInfoContainerStyle}>
+      <div className="profileMobile" style={styles.mainContainerStyle}>
+        <div className="infoMobile" style={styles.infoContainerStyle}>
+          <div className="personalMobile" style={styles.personalInfoContainerStyle}>
             <h1 style={styles.sectionTitleStyle}>Personal Information</h1>
-            <div style={styles.peronalItemContainerStyle}>
+            <div className="personalContainerMobile" style={styles.peronalItemContainerStyle}>
               <p style={styles.personalInfoItemsStyle}>Email:</p>
               <p>{Auth.getProfile().data.email}</p>
               {/* <button style={styles.updateButtonStyle}>update</button> */}

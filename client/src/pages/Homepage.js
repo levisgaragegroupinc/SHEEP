@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
+import background from '../assets/virus-gab3ed1248_1920.jpg'
 
 import { QUERY_All_PROJECTS } from "../utils/queries";
 
@@ -26,16 +27,16 @@ const Homepage = () => {
   }
   const styles = {
     mainContainerStyle: {
-      height: "85vh",
+      // height: "85vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       flexWrap: "wrap",
-      textAlign: "center"
+      textAlign: "center",
     },
     projectStyle: {
-      height: "65%",
-      width: "40%",
+      height: "350px",
+      width: "600px",
       minWidth: "300px",
       display: "flex",
       flexDirection: "column",
@@ -44,11 +45,13 @@ const Homepage = () => {
       margin: "1rem",
       border: ".1rem solid black",
       borderRadius: ".3rem",
+      backgroundColor: "#FFFFFF",
+      backgroundColor: "rgb(169,169,159, 0.85)"
     },
     imageStyle: {
       marginTop: "1.2rem",
       width: "35%",
-      height: "40%",
+      height: "35%",
       borderRadius: ".5rem",
     },
     linkStyle: {
@@ -68,16 +71,18 @@ const Homepage = () => {
     },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      {projects &&
-        projects.map((project) => (
-          <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
-            <h2>{project.name}</h2>
-            <img className="imgMobile" style= {styles.imageStyle} src={project.image}/>
-            <p className="projectDescription">{project.description}</p>
-            {viewProject(project)}
-          </div>
-        ))}
+    <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+      <div style={styles.mainContainerStyle}>
+        {projects &&
+          projects.map((project) => (
+            <div className="homepageBoxs" key={project._id} style={styles.projectStyle}>
+              <h2>{project.name}</h2>
+              <img className="imgMobile" style={styles.imageStyle} src={project.image} />
+              <p className="projectDescription">{project.description}</p>
+              {viewProject(project)}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

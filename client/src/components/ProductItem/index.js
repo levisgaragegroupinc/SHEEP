@@ -6,6 +6,15 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 function ProductItem(item) {
+
+  const styles = {
+    productStyle: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      margin: "1.8rem"
+    }
+  }
   const [state, dispatch] = useStoreContext();
 
   const { name, _id, price } = item;
@@ -34,14 +43,14 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
+    <div style={styles.productStyle}>
       <Link to={`/products/${_id}`}>
         <p>{name}</p>
       </Link>
       <div>
-        <span>${price}</span>
+        <span><strong>${price}</strong></span>
       </div>
-      <button onClick={addToCart}>Add to Petri Dish 🦠</button>
+      <button onClick={addToCart}>Add to Cart 🦠</button>
     </div>
   );
 }
