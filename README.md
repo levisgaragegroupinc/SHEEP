@@ -93,8 +93,6 @@ This is an MVC application built with the following technologies:
 
 ---
 ### View Your Profile
-![View Your Profile](./client\src\assets\10_profile.png)
-=======
 ![Home](./client/src/assets/1home.png)
 
 ---
