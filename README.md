@@ -89,7 +89,7 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Thank You For Your Donation
-![Thank You For Your Donation](./client/src/assets/9_sucess.png)
+![Thank You For Your Donation](./client/src/assets/9_success.png)
 
 ---
 ### View Your Profile
