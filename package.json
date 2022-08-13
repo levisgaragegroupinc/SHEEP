@@ -20,6 +20,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "@vue/shared": "^3.2.37",
     "dotenv": "^16.0.1"
   }
 }
