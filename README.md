@@ -89,11 +89,11 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Thank You For Your Donation
-![Thank You For Your Donation](.client/src/assets/9success.png)
+![Thank You For Your Donation](./client/src/assets/9sucess.png)
 
 ---
 ### View Your Profile
-![View Your Profile](.client/src/assets/10profile.png)
+![View Your Profile](./client/src/assets/10profile.png)
 
 
 ---
