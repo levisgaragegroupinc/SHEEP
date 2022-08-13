@@ -40,7 +40,7 @@ function Signup(props) {
       alignItems: "center",
     },
     formContainerStyle: {
-      backgroundColor: "#E6E6FA",
+      backgroundColor: "rgb(169,169,159, 0.9)",
       border: ".1rem solid black",
       height: "50%",
       width: "40%",
@@ -77,7 +77,7 @@ function Signup(props) {
             <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="firstName" style={styles.labelStyle}>First Name:</label>
               <input style={styles.inputStyle}
-                placeholder="First"
+                placeholder=" First"
                 name="firstName"
                 type="firstName"
                 id="firstName"
@@ -87,7 +87,7 @@ function Signup(props) {
             <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="lastName" style={styles.labelStyle}>Last Name:</label>
               <input style={styles.inputStyle}
-                placeholder="Last"
+                placeholder=" Last"
                 name="lastName"
                 type="lastName"
                 id="lastName"
@@ -97,7 +97,7 @@ function Signup(props) {
             <div  className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="email" style={styles.labelStyle}>Email:</label>
               <input style={styles.inputStyle}
-                placeholder="mail@email.com"
+                placeholder=" mail@email.com"
                 name="email"
                 type="email"
                 id="email"
@@ -107,7 +107,7 @@ function Signup(props) {
             <div className= "inputMobile" style={styles.formInputContainerStyle}>
               <label htmlFor="pwd" style={styles.labelStyle}>Password:</label>
               <input style={styles.inputStyle}
-                placeholder="******"
+                placeholder=" ******"
                 name="password"
                 type="password"
                 id="pwd"

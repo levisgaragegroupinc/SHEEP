@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../utils/mutations";
 import { idbPromise } from "../utils/helpers";
+import background from "../assets/virus-gab3ed1248_1920.jpg";
+import { Link } from "react-router-dom";
 
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
@@ -16,18 +18,14 @@ function Success() {
         const { data } = await addOrder({
           variables: { product: products },
         });
-        // console.log(data);
-        // const productData = data.addOrder.product;
-        // console.log("My product data:", productData);
+        console.log(data);
+        const productData = data.addOrder.product;
+        console.log("My product data:", productData);
 
-        // products.forEach((item) => {
-        //   idbPromise("cart", "delete", item);
-        // });
+        productData.forEach((item) => {
+          idbPromise("cart", "delete", item);
+        });
       }
-
-      //   setTimeout(() => {
-      //     window.location.assign("/");
-      //   }, 3000);
     }
 
     saveOrder();
@@ -40,13 +38,29 @@ function Success() {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      color: "white",
     },
   };
   return (
-    <div style={styles.mainContainerStyle}>
-      <h1>Thank You for you donation!</h1>
-      <p>ameobas earned (link to profile)</p>
-      <p>link to home page</p>
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        position: "fixed",
+        minWidth: "100%",
+        minHeight: "100%",
+      }}
+    >
+      <div style={styles.mainContainerStyle}>
+        <h1>Thank you for your donation!</h1>
+        <h4>
+          See your updated ameobas!
+        </h4>
+        <Link to="/profile">My Profile</Link>
+        <h4>Or</h4>
+          <Link to="/">Go Back Home</Link>
+      </div>
     </div>
   );
 }

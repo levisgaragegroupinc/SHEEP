@@ -37,7 +37,7 @@ db.once("open", async () => {
     {
       name: "Biofilm Research for Microbial Resistant Organisms",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Approximately 80% of chronic and recurrent microbial infections in the human body are due to bacterial biofilm. Microbial cells within biofilms have shown 10–1000 times more antibiotics resistance than the planktonic cells [79]. Biofilm is formed in diverse environmental niches, including freshwater rivers, rocks, deep-sea vents and hydrothermal hot springs. Biofilm-related infections can be broadly divided into two types.",
       image: "https://i.ibb.co/8YPkZTT/Eight.jpg",
       product: [
         product[0]._id,
@@ -53,7 +53,7 @@ db.once("open", async () => {
     {
       name: "Antibiotics for Vancomycin Staphylococcus Aureus",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit Est lorem ipsum dolor sit amet consectetur. Nunc id cursus metus aliquam eleifend mi. Aliquet porttitor lacus luctus accumsan tortor posuere ac. Pellentesque nec nam aliquam sem et tortor consequat. Rhoncus urna neque viverra justo nec. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Id nibh tortor id aliquet. Ipsum suspendisse ultrices gravida dictum fusce. Congue mauris rhoncus aenean vel elit. Risus quis varius quam quisque id. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare.",
+        "Vancomycin is considered a drug of last resort for severe MRSA and other resistant Gram-positive infections. Vancomycin enjoyed a high level of success for decades following MRSA outbreaks until recent reports of increasing S. aureus MICs culminating in high-level vancomycin-resistant S. aureus (VRSA), first reported in 2002. Since then, there have been selected case reports of VRSA disease in the US and other countries.",
       image: "https://i.ibb.co/p4VQ74B/Five.jpg",
       product: [
         product[0]._id,
@@ -69,7 +69,7 @@ db.once("open", async () => {
     {
       name: "Optimizing E-coli for Insulin Production",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Enim tortor at auctor urna nunc id cursus metus. Egestas integer eget aliquet nibh. Nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor aliquam. Pretium aenean pharetra magna ac. Velit sed ullamcorper morbi tincidunt ornare massa. Purus sit amet volutpat consequat. In cursus turpis massa tincidunt dui. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.",
+        "The rapid increase in the number of diabetic patients globally and exploration of alternate insulin delivery methods such as inhalation or oral route that rely on higher doses, is bound to escalate the demand for recombinant insulin in near future. Current manufacturing technologies would be unable to meet the growing demand of affordable insulin due to limitation in production capacity and high production cost.",
       image: "https://i.ibb.co/BKjWfMC/Four.jpg",
       product: [
         product[0]._id,
@@ -83,9 +83,9 @@ db.once("open", async () => {
       category: categories[0]._id,
     },
     {
-      name: "Stem Cell Usage to Regrow Diseased Heart Tissue",
+      name: "Stem Cell Usage to Regrow Heart Tissue",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Auctor augue mauris augue neque. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Nullam eget felis eget nunc. Malesuada proin libero nunc consequat interdum. Enim tortor at auctor urna nunc id cursus metus. Egestas integer eget aliquet nibh. Nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor aliquam. Pretium aenean pharetra magna ac. Velit sed ullamcorper morbi tincidunt ornare massa. Purus sit amet volutpat consequat. In cursus turpis massa tincidunt dui. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.",
+        "Cell and gene therapies offer hope to millions of people living with genetic and some degenerative diseases. These new treatment options are a paradigm shift. They don’t just treat symptoms. They help the body repair itself from within. Researchers have uncovered stem cell-activated mechanisms of healing after a heart attack. Stem cells restored cardiac muscle back to its condition before the heart attack, in turn providing a blueprint of how stem cells may work.",
       image: "https://i.ibb.co/wRxzn6n/Eleven.jpg",
       product: [
         product[0]._id,
@@ -101,7 +101,7 @@ db.once("open", async () => {
     {
       name: "T-Cells Effect on Cancer Cells",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Auctor augue mauris augue neque. Tempor orci dapibus ultrices in iaculis nunc sed augue lacus. Nullam eget felis eget nunc. Malesuada proin libero nunc consequat interdum. Enim tortor at auctor urna nunc id cursus metus. Egestas integer eget aliquet nibh. Nibh mauris cursus mattis molestie a iaculis at. Pellentesque eu tincidunt tortor aliquam. Pretium aenean pharetra magna ac. Velit sed ullamcorper morbi tincidunt ornare massa. Purus sit amet volutpat consequat. In cursus turpis massa tincidunt dui. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.",
+        "T cells play a vital role in pathogen elimination and tumor immunosurveillance. The human body is capable of producing an array of specialized T cells that provide unique responses to the diverse spectrum of tumor cells and pathogens (viruses, bacteria and parasites) that are capable of penetrating host defenses. The modulation of T cells is an exciting prospect for the development of novel therapies for immuno-oncology –autoimmune applications, adoptive cell therapy and vaccine development.",
       image: "https://i.ibb.co/jT8GkSj/Ten.jpg",
       product: [
         product[0]._id,
@@ -133,7 +133,7 @@ db.once("open", async () => {
     {
       name: "Blood Optimization to Increase Immmune Health",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Dignissim sodales ut eu sem. Maecenas ultricies mi eget mauris. Senectus et netus et malesuada fames ac. Posuere morbi leo urna molestie at elementum eu. Morbi tincidunt augue interdum velit euismod in pellentesque. Aliquam ultrices sagittis orci a scelerisque purus semper. Diam phasellus vestibulum lorem sed risus. Non nisi est sit amet facilisis magna etiam tempor. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Eget nunc lobortis mattis aliquam faucibus. Ullamcorper a lacus vestibulum sed. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Auctor augue mauris augue neque gravida in fermentum. At elementum eu facilisis sed odio morbi quis commodo. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Consectetur lorem donec massa sapien faucibus.",
+        "Plant-based and/or fish (pescatarian) diets may help lower the odds of developing moderate to severe COVID-19 infection, suggest the findings of a six-country study. Several studies have suggested that diet might have an important role in symptom severity and illness duration of COVID-19 infection. But, as yet, there’s little evidence to confirm or refute this theory.",
       image: "https://i.ibb.co/gy4VsKW/Nine.jpg",
       product: [
         product[0]._id,
@@ -149,7 +149,7 @@ db.once("open", async () => {
     {
       name: "Use of Bacteriophages to Eliminate Pathogens",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas volutpat blandit aliquam etiam erat velit. Dignissim sodales ut eu sem. Maecenas ultricies mi eget mauris. Senectus et netus et malesuada fames ac. Posuere morbi leo urna molestie at elementum eu. Morbi tincidunt augue interdum velit euismod in pellentesque. Aliquam ultrices sagittis orci a scelerisque purus semper. Diam phasellus vestibulum lorem sed risus. Non nisi est sit amet facilisis magna etiam tempor. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Eget nunc lobortis mattis aliquam faucibus. Ullamcorper a lacus vestibulum sed. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Auctor augue mauris augue neque gravida in fermentum. At elementum eu facilisis sed odio morbi quis commodo. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Consectetur lorem donec massa sapien faucibus.",
+        "Bacteriophages (BPs) are viruses that can infect and kill bacteria without any negative effect on human or animal cells. For this reason, it is supposed that they can be used, alone or in combination with antibiotics, to treat bacterial infections. Administration of BPs for this purpose dates to about a century ago, mainly based on the studies of a French researcher, Felix d’Herelle. Due to his collaboration with his Georgian colleagues, BP therapy was largely used in the Soviet Union in patients of any age suffering from a wide range of diseases. The results were considered very satisfactory and were published in several reports.",
       image: "https://i.ibb.co/YcgdwBY/Seven.jpg",
       product: [
         product[0]._id,

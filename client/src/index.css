@@ -33,12 +33,12 @@
     display: none !important;
   }
   .titleDesMobile {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
   }
-  .navlinkMobile{
+  .navlinkMobile {
     display: flex !important;
     justify-content: center !important;
-    align-items: center!important;
+    align-items: center !important;
   }
 
   .projectDescription {
@@ -46,24 +46,24 @@
   }
 
   .imgMobile {
+    margin-top: 5px;
     height: 45% !important;
     width: 40% !important;
   }
 
-  .formMobile{
+  .formMobile {
     height: 75% !important;
     width: 75% !important;
   }
 
-  .inputMobile{
+  .inputMobile {
     flex-direction: column !important;
     justify-content: center !important;
   }
 
-  .profileMobile{
+  .profileMobile {
     flex-direction: column !important;
     justify-content: center !important;
-
   }
 
   .infoMobile {
@@ -77,10 +77,15 @@
   }
 
   .singleDescription {
-    overflow-y:auto;
+    overflow-y: auto;
   }
-  
+  .projectTitleMobile {
+    margin: 0px !important;
+    background-color: none !important;
+  }
 }
+
+
 
 @media screen and (max-width: 425px) {
   .imgMobile {
@@ -88,15 +93,19 @@
     width: 60% !important;
   }
 
-  .personalMobile{
+  .personalMobile {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-
+    border-radius: 20px !important;
   }
-  
+
   .historyMobile {
-    overflow-y:auto;
+    overflow-y: auto;
   }
+  .donateMobile {
+    overflow-y: auto;
+    
 
+  }
 }

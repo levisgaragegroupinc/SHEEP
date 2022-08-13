@@ -39,7 +39,7 @@ function Login(props) {
       alignItems: "center",
     },
     formContainerStyle: {
-      backgroundColor: "#E6E6FA",
+      backgroundColor: "rgb(169,169,159, 0.9)",
       border: ".1rem solid black",
       height: "50%",
       width: "40%",
@@ -77,7 +77,7 @@ function Login(props) {
                 Email address:
               </label>
               <input style={styles.inputStyle}
-                placeholder="mail@email.com"
+                placeholder=" mail@email.com"
                 name="email"
                 type="email"
                 id="email"
@@ -89,7 +89,7 @@ function Login(props) {
                 Password:
               </label>
               <input style={styles.inputStyle}
-                placeholder="******"
+                placeholder=" ******"
                 name="password"
                 type="password"
                 id="pwd"

@@ -27,7 +27,7 @@ const Homepage = () => {
   }
   const styles = {
     mainContainerStyle: {
-      height: "85vh",
+      // height: "85vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -35,8 +35,8 @@ const Homepage = () => {
       textAlign: "center",
     },
     projectStyle: {
-      height: "65%",
-      width: "40%",
+      height: "350px",
+      width: "600px",
       minWidth: "300px",
       display: "flex",
       flexDirection: "column",
@@ -46,11 +46,12 @@ const Homepage = () => {
       border: ".1rem solid black",
       borderRadius: ".3rem",
       backgroundColor: "#FFFFFF",
+      backgroundColor: "rgb(169,169,159, 0.9)"
     },
     imageStyle: {
       marginTop: "1.2rem",
       width: "35%",
-      height: "40%",
+      height: "35%",
       borderRadius: ".5rem",
     },
     linkStyle: {
@@ -70,7 +71,7 @@ const Homepage = () => {
     },
   };
   return (
-    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+    <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
       <div style={styles.mainContainerStyle}>
         {projects &&
           projects.map((project) => (

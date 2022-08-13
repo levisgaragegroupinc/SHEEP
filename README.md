@@ -6,7 +6,7 @@
 
 ## Description
 
-The last couple of years have heightened our understanding of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
+The last couple of years of living with the threat of COVID and other diseases have heightened our awareness of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
 
 [Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 
@@ -38,34 +38,85 @@ This is an MVC application built with the following technologies:
 - [Mongoose](https://mongoosejs.com/docs/)
 - [JSON Web Tokens](https://jwt.io/)
 - [Stripe](https://stripe.com/docs)
+- [@vue/shared](https://www.npmjs.com/package/@vue/shared)
 - Responsive design
 
 ### Application Links
 
 - [Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 - [Git Hub Repository STOP: Support The Obliteration of Pandemics](https://github.com/levisgaragegroupinc/SHEEP)
-- [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://serene-dawn-83584.herokuapp.com/)
+- [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://support-pandemic-obliteration.herokuapp.com/)
 - [Presentation Slides STOP: Support The Obliteration of Pandemics](https://docs.google.com/presentation/d/1stKpRgIwOVdcFMI54V46_ce0NJV42DUOtqW_2l4ayrI/edit#slide=id.p)
 
 ---
 
 ## Usage
 
-1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://serene-dawn-83584.herokuapp.com/)
+1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://support-pandemic-obliteration.herokuapp.com/)
 
-### Log In or Sign up
+---
+### Home
+![Home](./client/src/assets/1home.png)
+
+---
+### Log In
+![Log In](./client/src/assets/2login.png)
+
+---
+### Sign up
+![Sign up](./client/src/assets/3signup.png)
+
+---
+### Project List
+![Projects](./client/src/assets/4project_list.png)
+
+---
+### Project Page
+![Project Page](./client/src/assets/5project_page.png)
+
+---
+### Donate
+![Donate](./client/src/assets/6donate.png)
+
+---
+### Add to Cart
+![Add to Cart](./client/src/assets/7cart.png)
+
+---
+### Checkout with Stripe
+![Checkout with Stripe](./client/src/assets/8stripe.png)
+
+---
+### Thank You For Your Donation
+![Thank You For Your Donation](./client/src/assets/9sucess.png)
+
+---
+### View Your Profile
+![View Your Profile](./client/src/assets/10profile.png)
+
 
 ---
 
 ## Tests
 
-Testing was done by manually entering data as a user would. Queries were tested in Apollo.
+Testing was done by manually entering data and testing links and layouts as a user would. Queries were tested in Apollo.
 
 ---
 
 ## Contribute
 
 In order to create this application, we used the skills we have at the moment. We are open to suggestions, if there are ways to streamline the code or if any bugs are found.
+
+There are areas we would like to explore for future development such as:
+
+- Adding a form for users to suggest future projects to add to the site
+- Adding ability to update email and password on profile page
+- Adding ability to see how much money has been donated to each project
+- Adding ability to see how many donors each project has
+- Adding news feed filtered to show research area related news articles 
+- Suggesting other items users might like to add to their cart at checkout 
+- Adding incentives based on dollar amounts donated (get a stuffed sheep)
+
 
 ---
 
@@ -74,6 +125,7 @@ In order to create this application, we used the skills we have at the moment. W
 - [Stripe payment platform](https://stripe.com/docs)
 - [The Net Ninja: Components & Templates](https://www.youtube.com/watch?v=9D1x7-2FmTA)
 - [Pixabay: PIRO4D](https://pixabay.com/illustrations/virus-pathogen-infection-biology-4937609/)
+- [@vue/shared](https://www.npmjs.com/package/@vue/shared)
 - Trilogy Education Services, LLC for example code throughout the week 22 exercises.
 
 ### Questions
