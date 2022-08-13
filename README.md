@@ -39,6 +39,7 @@ This is an MVC application built with the following technologies:
 - [Mongoose](https://mongoosejs.com/docs/)
 - [JSON Web Tokens](https://jwt.io/)
 - [Stripe](https://stripe.com/docs)
+- [@vue/shared](https://www.npmjs.com/package/@vue/shared)
 - Responsive design
 
 ### Application Links
@@ -54,22 +55,46 @@ This is an MVC application built with the following technologies:
 
 1. Go to the deployed application: [Deployed Heroku Link STOP: Support The Obliteration of Pandemics](https://support-pandemic-obliteration.herokuapp.com/)
 
+---
 ### Home
+![Home](client\src\assets\1_home.png)
 
-
+---
 ### Log In
+![Log In](client\src\assets\2_login.png)
 
-
+---
 ### Sign up
+![Sign up](client\src\assets\3_signup.png)
 
+---
+### Project List
+![Projects](client\src\assets\4_project_list.png)
 
-### Projects
+---
+### Project Page
+![Project Page](client\src\assets\5_project_page.png)
 
-
+---
 ### Donate
+![Donate](client\src\assets\6_donate.png)
 
+---
+### Add to Cart
+![Add to Cart](client\src\assets\7_cart.png)
 
-### Add to Petri Dish
+---
+### Checkout with Stripe
+![Checkout with Stripe](client\src\assets\8_stripe.png)
+
+---
+### Thank You For Your Donation
+![Thank You For Your Donation](client\src\assets\9_sucess.png)
+
+---
+### View Your Profile
+![View Your Profile](client\src\assets\10_profile.png)
+
 
 ---
 
@@ -83,6 +108,17 @@ Testing was done by manually entering data as a user would. Queries were tested 
 
 In order to create this application, we used the skills we have at the moment. We are open to suggestions, if there are ways to streamline the code or if any bugs are found.
 
+There are areas we would like to explore for future development such as:
+
+- Adding a form for users to suggest future projects to add to the site
+- Adding ability to update email and password on profile page
+- Adding ability to see how much money has been donated to each project
+- Adding ability to see how many donors each project has
+- Adding news feed filtered to show research area related news articles 
+- Suggesting other items users might like to add to their cart at checkout 
+- Adding incentives based on dollar amounts donated (get a stuffed sheep)
+
+
 ---
 
 ## Credits
@@ -90,6 +126,7 @@ In order to create this application, we used the skills we have at the moment. W
 - [Stripe payment platform](https://stripe.com/docs)
 - [The Net Ninja: Components & Templates](https://www.youtube.com/watch?v=9D1x7-2FmTA)
 - [Pixabay: PIRO4D](https://pixabay.com/illustrations/virus-pathogen-infection-biology-4937609/)
+- [@vue/shared](https://www.npmjs.com/package/@vue/shared)
 - Trilogy Education Services, LLC for example code throughout the week 22 exercises.
 
 ### Questions
