@@ -15,11 +15,10 @@ const ProfilePage = () => {
 
   const styles = {
     mainContainerStyle: {
-      height: "80vh",
+      height: "85vh",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      margin: "1rem",
     },
     infoContainerStyle: {
       height: "80%",
