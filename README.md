@@ -7,7 +7,7 @@
 
 ## Description
 
-The last couple of years have heightened our understanding of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
+The last couple of years of living with the threat of COVID and other diseases have heightened our awareness of the need for funding for medical research. We have designed a site that will give users the opportunity to contribute to research projects of their choosing and collect badges for their contributions.
 
 [Project Proposal STOP: Support The Obliteration of Pandemics](https://docs.google.com/document/d/1THYbiRfj2iuaa6aMv_CR1f4xCH5Fp0SOp_Z0eW0vCsQ/edit)
 
@@ -100,7 +100,7 @@ This is an MVC application built with the following technologies:
 
 ## Tests
 
-Testing was done by manually entering data as a user would. Queries were tested in Apollo.
+Testing was done by manually entering data and testing links and layouts as a user would. Queries were tested in Apollo.
 
 ---
 
