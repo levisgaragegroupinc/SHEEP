@@ -51,6 +51,9 @@ function Success() {
         backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        position: "fixed",
+        minWidth: "100%",
+        minHeight: "100%",
       }}
     >
       <div style={styles.mainContainerStyle}>
