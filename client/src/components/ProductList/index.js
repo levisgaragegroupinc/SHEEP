@@ -6,7 +6,6 @@ import { useQuery } from "@apollo/client";
 import { QUERY_SINGLE_PROJECT } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import { useParams } from "react-router-dom";
-import { slotFlagsText } from "@vue/shared";
 
 function ProductList() {
   const styles = {
@@ -20,7 +19,7 @@ function ProductList() {
       width: "auto",
       height: "auto",
       borderRadius: "2rem",
-      padding: "1rem"
+      padding: "1rem",
     },
     nameStyle: {
       fontSize: "2rem",
@@ -30,7 +29,6 @@ function ProductList() {
       backgroundColor: "#429786",
       borderStyle: "double",
       borderRadius: ".5rem",
-
     },
   };
 
