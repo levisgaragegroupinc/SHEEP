@@ -61,39 +61,39 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Log In
-![Log In](client\src\assets\2login.png)
+![Log In](./client/src/assets/2login.png)
 
 ---
 ### Sign up
-![Sign up](client\src\assets\3signup.png)
+![Sign up](./client/src/assets/3signup.png)
 
 ---
 ### Project List
-![Projects](client\src\assets\4project_list.png)
+![Projects](./client/src/assets/4project_list.png)
 
 ---
 ### Project Page
-![Project Page](client\src\assets\5project_page.png)
+![Project Page](./client/src/assets/5project_page.png)
 
 ---
 ### Donate
-![Donate](client\src\assets\6donate.png)
+![Donate](./client/src/assets/6donate.png)
 
 ---
 ### Add to Cart
-![Add to Cart](client\src\assets\7cart.png)
+![Add to Cart](./client/src/assets/7cart.png)
 
 ---
 ### Checkout with Stripe
-![Checkout with Stripe](client\src\assets\8stripe.png)
+![Checkout with Stripe](./client/src/assets/8stripe.png)
 
 ---
 ### Thank You For Your Donation
-![Thank You For Your Donation](client\src\assets\9sucess.png)
+![Thank You For Your Donation](.client/src/assets/9sucess.png)
 
 ---
 ### View Your Profile
-![View Your Profile](client\src\assets\10profile.png)
+![View Your Profile](.client/src/assets/10profile.png)
 
 
 ---
