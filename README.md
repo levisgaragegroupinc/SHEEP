@@ -57,8 +57,7 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Home
-<<<<<<< HEAD
-![Home](./client\src\assets\2login.png)
+![Home](./client\src\assets\1home.png)
 
 ---
 ### Log In
