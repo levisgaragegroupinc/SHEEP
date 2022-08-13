@@ -34,6 +34,7 @@ const ProfilePage = () => {
       marginLeft: ".8rem",
       backgroundColor: "white",
       borderRadius: "75px",
+      overflow: "auto",
     },
     petriDishContainerStyle: {
       height: "65%",
@@ -113,6 +114,7 @@ const ProfilePage = () => {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      overflow: "auto",
     },
     donationNameContainer: {
       display: "flex",
@@ -120,6 +122,7 @@ const ProfilePage = () => {
       alignItems: "center",
       justifyContent: "center",
       padding: "20px",
+      overflow: "auto",
     },
   };
 
@@ -221,12 +224,12 @@ const ProfilePage = () => {
             <div className="personalContainerMobile" style={styles.peronalItemContainerStyle}>
               <p style={styles.personalInfoItemsStyle}>Email:</p>
               <p>{Auth.getProfile().data.email}</p>
-              {/* <button style={styles.updateButtonStyle}>update</button> */}
+              <button style={styles.updateButtonStyle}></button>
             </div>
             <div style={styles.peronalItemContainerStyle}>
               <p style={styles.personalInfoItemsStyle}>Password:</p>
               <p>************</p>
-              {/* <button style={styles.updateButtonStyle}>update</button> */}
+              <button style={styles.updateButtonStyle}></button>
             </div>
           </div>
           <div style={styles.petriDishContainerStyle}>
