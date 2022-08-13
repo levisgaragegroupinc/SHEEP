@@ -57,51 +57,15 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Home
-![Home](./client\src\assets\1home.png)
-
----
-### Log In
-![Log In](./client\src\assets\2_login.png)
-
----
-### Sign up
-![Sign up](./client\src\assets\3_signup.png)
-
----
-### Project List
-![Projects](./client\src\assets\4project_list.png)
-
----
-### Project Page
-![Project Page](./client\src\assets\5project_page.png)
-
----
-### Donate
-![Donate](./client\src\assets\6donate.png)
-
----
-### Add to Cart
-![Add to Cart](./client\src\assets\7_cart.png)
-
----
-### Checkout with Stripe
-![Checkout with Stripe](./client\src\assets\8stripe.png)
-
----
-### Thank You For Your Donation
-![Thank You For Your Donation](./client\src\assets\9_success.png)
-
----
-### View Your Profile
 ![Home](./client/src/assets/1home.png)
 
 ---
 ### Log In
-![Log In](./client/src/assets/2login.png)
+![Log In](./client/src/assets/2_login.png)
 
 ---
 ### Sign up
-![Sign up](./client/src/assets/3signup.png)
+![Sign up](./client/src/assets/3_signup.png)
 
 ---
 ### Project List
@@ -117,7 +81,7 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Add to Cart
-![Add to Cart](./client/src/assets/7cart.png)
+![Add to Cart](./client/src/assets/7_cart.png)
 
 ---
 ### Checkout with Stripe
@@ -125,7 +89,7 @@ This is an MVC application built with the following technologies:
 
 ---
 ### Thank You For Your Donation
-![Thank You For Your Donation](./client/src/assets/9sucess.png)
+![Thank You For Your Donation](./client/src/assets/9_sucess.png)
 
 ---
 ### View Your Profile
