@@ -221,12 +221,12 @@ const ProfilePage = () => {
             <div style={styles.peronalItemContainerStyle}>
               <p style={styles.personalInfoItemsStyle}>Email:</p>
               <p>{Auth.getProfile().data.email}</p>
-              <button style={styles.updateButtonStyle}>update</button>
+              {/* <button style={styles.updateButtonStyle}>update</button> */}
             </div>
             <div style={styles.peronalItemContainerStyle}>
               <p style={styles.personalInfoItemsStyle}>Password:</p>
               <p>************</p>
-              <button style={styles.updateButtonStyle}>update</button>
+              {/* <button style={styles.updateButtonStyle}>update</button> */}
             </div>
           </div>
           <div style={styles.petriDishContainerStyle}>
