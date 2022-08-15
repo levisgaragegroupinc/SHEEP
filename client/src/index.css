@@ -83,9 +83,12 @@
     margin: 0px !important;
     background-color: none !important;
   }
+  .donateConMobile {
+    width: 100% !important;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
 }
-
-
 
 @media screen and (max-width: 425px) {
   .imgMobile {
@@ -100,12 +103,30 @@
     border-radius: 20px !important;
   }
 
+  .petriContainerMobile {
+    border-radius: 20px !important;
+  }
+
+  .transContainerMobile {
+    border-radius: 20px !important;
+  }
+
+  .donateMobile {
+    font-size: 20px !important;
+    padding: 1rem !important;
+    margin-bottom: 0rem !important;
+  }
+
   .historyMobile {
     overflow-y: auto;
   }
-  .donateMobile {
-    overflow-y: auto;
-    
 
+  .donationOption {
+    margin: 0.3 rem !important;
+    font-size: 12px !important;
+  }
+  .productMobile {
+    margin: 0 rem !important;
+    font-size: 12px !important;
   }
 }

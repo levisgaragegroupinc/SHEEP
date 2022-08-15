@@ -73,10 +73,10 @@ function ProductList() {
   }
 
   return (
-    <div style={styles.donateContainerStyle}>
+    <div className="donateConMobile" style={styles.donateContainerStyle}>
       <h2 className="donateMobile"style={styles.nameStyle}>Donation Options:</h2>
       {state.products.length ? (
-        <div style={styles.donationOption}>
+        <div className="donationOption" style={styles.donationOption}>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}
