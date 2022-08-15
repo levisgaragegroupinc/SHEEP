@@ -100,7 +100,7 @@ const Navbar = () => {
           src={logo}
           alt="Virus Cell Molecule with STOP to the right"
         ></img>
-        <h3 className="titleDesMobile">Support The Obliteration of Pandemics</h3>
+        <p className="titleDesMobile">Support The Obliteration of Pandemics</p>
       </div>
       <div className= "navlinkMobile" style={styles.linksContainerStyle}>
         <Link to={"/"} style={styles.linksStyle}>

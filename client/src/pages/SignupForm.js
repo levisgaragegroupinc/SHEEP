@@ -42,7 +42,7 @@ function Signup(props) {
     formContainerStyle: {
       backgroundColor: "rgb(169,169,159, 0.9)",
       border: ".1rem solid black",
-      height: "50%",
+      height: "60%",
       width: "40%",
       display: "flex",
       flexDirection: "column",

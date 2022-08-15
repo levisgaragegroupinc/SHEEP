@@ -22,7 +22,7 @@ function ProductList() {
       padding: "1rem",
     },
     nameStyle: {
-      fontSize: "2rem",
+      fontSize: "1rem",
       fontWeight: "bolder",
       padding: ".5rem",
       margin: ".5em 4em 1em",
