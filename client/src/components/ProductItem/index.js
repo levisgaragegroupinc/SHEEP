@@ -43,14 +43,14 @@ function ProductItem(item) {
   };
 
   return (
-    <div style={styles.productStyle}>
+    <div className="productMobile" style={styles.productStyle}>
       <Link to={`/products/${_id}`}>
-        <p>{name}</p>
+        <p className="productMobile">{name}</p>
       </Link>
       <div>
         <span><strong>${price}</strong></span>
       </div>
-      <button onClick={addToCart}>Add to Cart 🦠</button>
+      <button  className="productMobile" onClick={addToCart}>Add to Cart 🦠</button>
     </div>
   );
 }

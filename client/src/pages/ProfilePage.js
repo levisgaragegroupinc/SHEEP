@@ -68,6 +68,7 @@ const ProfilePage = () => {
       justifyContent: "space-between",
       alignItems: "center",
       height: "25%",
+      overflow: "auto",
     },
     personalInfoItemsStyle: {
       fontSize: "1.2rem",
@@ -244,7 +245,7 @@ const ProfilePage = () => {
               <button style={styles.updateButtonStyle}></button>
             </div>
           </div>
-          <div style={styles.petriDishContainerStyle}>
+          <div className="petriContainerMobile" style={styles.petriDishContainerStyle}>
             <h1 style={styles.sectionTitleStyle}>Petri Dish</h1>
             <div style={styles.amoebaContainerStyle}>
               <p>{Array(amoeba).fill("🦠")}</p>
@@ -257,7 +258,7 @@ const ProfilePage = () => {
             </div>
           </div>
         </div>
-        <div style={styles.transactionContainerStyle}>
+        <div className="transContainerMobile" style={styles.transactionContainerStyle}>
           <h1 style={styles.sectionTitleStyle}>Donation Milestones!</h1>
           <div style={styles.donationNameContainer}>
             <p
